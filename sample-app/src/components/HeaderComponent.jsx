@@ -28,7 +28,10 @@ class HeaderComponent extends Component {
                         <a className="nav-link" onClick={this.addUser}>Add User</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" >Link 2</a>
+                        <a className="nav-link" >Suppliers</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" >Stock List</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" onClick={this.login}>Logout</a>
