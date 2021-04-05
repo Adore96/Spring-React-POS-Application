@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="974d01d3-6973-418e-9f6f-713ad5ff70c2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1qEofzIl0o6IFFRGIk9howarbLP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="JPA.DatabaseSchemaImportDialog" value="5fa32d7a-89ef-4a5a-80c6-043c76f6ab6e" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../EPIC_PROJECTS/UNIFIED_MERCHANT_PORTAL/ADMINPORTAL" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="com.adore96.ReactBackEnd.mapping" />
+      <recent name="com.adore96.ReactBackEnd.model" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ReactBackEndApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ReactBackEnd" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.adore96.ReactBackEnd.ReactBackEndApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="974d01d3-6973-418e-9f6f-713ad5ff70c2" name="Default Changelist" comment="" />
+      <created>1616654218527</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616654218527</updated>
+      <workItem from="1616654219609" duration="112000" />
+      <workItem from="1616654342333" duration="3739000" />
+      <workItem from="1616660480571" duration="1132000" />
+      <workItem from="1616661637383" duration="4479000" />
+      <workItem from="1616731623289" duration="8462000" />
+      <workItem from="1616988681002" duration="14392000" />
+      <workItem from="1617073840231" duration="1079000" />
+      <workItem from="1617074989603" duration="1188000" />
+      <workItem from="1617178928980" duration="5173000" />
+      <workItem from="1617187118214" duration="2198000" />
+      <workItem from="1617248417154" duration="6255000" />
+      <workItem from="1617333938589" duration="2429000" />
+      <workItem from="1617344180966" duration="2245000" />
+      <workItem from="1617599438778" duration="2003000" />
+      <workItem from="1617603137038" duration="2284000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
