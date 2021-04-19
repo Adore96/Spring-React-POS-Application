@@ -9,6 +9,8 @@ class HeaderComponent extends Component {
         this.state = {}
         this.addUser = this.addUser.bind(this);
         this.login = this.login.bind(this);
+        this.suppliers = this.suppliers.bind(this);
+        this.stocks = this.stocks.bind(this);
     }
 
     addUser() {
@@ -17,6 +19,14 @@ class HeaderComponent extends Component {
 
     login() {
         this.props.history.push('/login');
+    }
+
+    suppliers() {
+        this.props.history.push('/suppliers');
+    }
+
+    stocks() {
+        this.props.history.push('/stocks');
     }
 
     render() {
@@ -28,10 +38,10 @@ class HeaderComponent extends Component {
                         <a className="nav-link" onClick={this.addUser}>Add User</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" >Suppliers</a>
+                        <a className="nav-link" onClick={this.suppliers}>Suppliers</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" >Stock List</a>
+                        <a className="nav-link" onClick={this.stocks}>Stock List</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" onClick={this.login}>Logout</a>

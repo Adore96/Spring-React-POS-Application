@@ -2,7 +2,7 @@ import React from 'react';
 import userService from "../services/UserService";
 import UserService from "../services/UserService";
 
-class UserComponent extends React.Component {
+class UserListComponent extends React.Component {
 
     constructor(props) {
         super(props);
@@ -79,4 +79,4 @@ class UserComponent extends React.Component {
     }
 }
 
-export default UserComponent;
+export default UserListComponent;
