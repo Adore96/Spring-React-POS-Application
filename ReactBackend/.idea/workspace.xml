@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="974d01d3-6973-418e-9f6f-713ad5ff70c2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../sample-app/src/services/StockService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/bean/UserInputBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/bean/UserInputBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sample-app/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/node_modules/.cache/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/HeaderComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/HeaderComponent.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sample-app/src/components/StocksListComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/StocksListComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/SuppliersListComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/SuppliersListComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/UserComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/UserListComponent.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,17 +59,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ReactBackEndApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="ReactBackEnd" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.adore96.ReactBackEnd.ReactBackEndApplication" />
@@ -105,7 +92,7 @@
       <workItem from="1617603137038" duration="2284000" />
       <workItem from="1617621880803" duration="859000" />
       <workItem from="1617679245359" duration="1208000" />
-      <workItem from="1618823872804" duration="3961000" />
+      <workItem from="1618823872804" duration="5054000" />
     </task>
     <servers />
   </component>
