@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import UserService from "../services/UserService";
-import userService from "../services/UserService";
+import StockService from "../../services/StockService";
 
 class StocksListComponent extends Component {
 
@@ -35,14 +34,15 @@ class StocksListComponent extends Component {
     render() {
         return (
             <div>
-                <h1 className="text-center">Stocks List</h1>
+                <h1 className="text-center">Stocks</h1>
                 <table className="table table-striped">
 
                     <thead>
                     <tr>
                         <th>Item Code</th>
                         <th>Name</th>
-                        <th>Amount Remaining</th>
+                        <th>Amount Remaining/KG</th>
+                        <th>Unit Price/LKR</th>
                         <th>Supplier</th>
                         <th>Actions</th>
                     </tr>
@@ -53,9 +53,11 @@ class StocksListComponent extends Component {
                         this.state.stocks.map(
                             stock =>
                                 <tr key={stock.id}>
-                                    <td>{stock.username}</td>
-                                    <td>{stock.email}</td>
-                                    <td>{stock.telephone}</td>
+                                    <td>{stock.itemcode}</td>
+                                    <td>{stock.name}</td>
+                                    <td>{stock.amountremaining}</td>
+                                    <td>{stock.unitprice}</td>
+                                    <td>{stock.supplier}</td>
                                     <td>
                                         <button onClick={() => this.updateStock(stock.id)}
                                                 className="btn btn-outline-info">Update

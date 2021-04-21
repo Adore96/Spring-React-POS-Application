@@ -18,7 +18,7 @@ import java.util.Map;
 @CrossOrigin
 @RestController
 @RequestMapping("api/v1/")
-public class userController {
+public class UserController {
 
     @Autowired
     UserRepository userRepository;
@@ -31,7 +31,7 @@ public class userController {
     }
 
     //add user
-    @PostMapping("/add")
+    @PostMapping("/adduser")
     public UserEntity addEmployee(@RequestBody UserEntity userEntity) {
         System.out.println("ListUser Method");
         userRepository.save(userEntity);

@@ -5,11 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="974d01d3-6973-418e-9f6f-713ad5ff70c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../sample-app/src/services/StockService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sample-app/src/components/stockComponents/AddStockComponent.Jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sample-app/src/components/stockComponents/UpdateStockComponent.Jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sample-app/src/components/stockComponents/ViewStockComponent.Jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sample-app/src/components/supplierComponent/AddSupplierComponent.Jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sample-app/src/components/supplierComponent/UpdateSupplierComponent.Jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sample-app/src/components/supplierComponent/ViewSupplierComponent.Jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ReactBackEnd.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ReactBackEnd.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5fa32d7a-89ef-4a5a-80c6-043c76f6ab6e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5fa32d7a-89ef-4a5a-80c6-043c76f6ab6e.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/bean/UserInputBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/bean/UserInputBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/userController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/mapping/StockEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/bean/UserInputBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/bean/UserInputBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/controller/userController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/controller/userController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sample-app/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/node_modules/.cache/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/StocksListComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/StocksListComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/AddUserComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/userComponents/AddUserComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/FooterComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/commonComponents/FooterComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/HeaderComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/commonComponents/HeaderComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/LoginComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/commonComponents/LoginComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/StocksListComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/stockComponents/StocksListComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/SuppliersListComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/supplierComponent/SuppliersListComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/UpdateUserComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/userComponents/UpdateUserComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/UserListComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/userComponents/UserListComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/ViewUserComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/userComponents/ViewUserComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/services/StockService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/services/StockService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,12 +69,17 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="com.adore96.ReactBackEnd.mapping" />
+      <recent name="" />
       <recent name="com.adore96.ReactBackEnd.model" />
     </key>
   </component>
@@ -93,6 +118,8 @@
       <workItem from="1617621880803" duration="859000" />
       <workItem from="1617679245359" duration="1208000" />
       <workItem from="1618823872804" duration="5054000" />
+      <workItem from="1618888183034" duration="11509000" />
+      <workItem from="1618974626267" duration="591000" />
     </task>
     <servers />
   </component>

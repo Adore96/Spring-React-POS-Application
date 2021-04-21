@@ -1,7 +1,7 @@
 package com.adore96.ReactBackEnd.mapping;/*
 kasun_k 
 Project ReactBackEnd
-On 4/19/2021
+On 4/20/2021
 */
 
 import javax.persistence.*;
@@ -12,8 +12,10 @@ import java.util.Objects;
 public class StockEntity {
     private int id;
     private String name;
-    private String itemCode;
-    private String amountRemaining;
+    private String itemcode;
+    private int supplier;
+    private String amountremaining;
+    private int unitprice;
 
     @Id
     @Column(name = "id")
@@ -36,23 +38,43 @@ public class StockEntity {
     }
 
     @Basic
-    @Column(name = "itemCode")
-    public String getItemCode() {
-        return itemCode;
+    @Column(name = "itemcode")
+    public String getItemcode() {
+        return itemcode;
     }
 
-    public void setItemCode(String itemCode) {
-        this.itemCode = itemCode;
+    public void setItemcode(String itemcode) {
+        this.itemcode = itemcode;
     }
 
     @Basic
-    @Column(name = "amountRemaining")
-    public String getAmountRemaining() {
-        return amountRemaining;
+    @Column(name = "supplier")
+    public int getSupplier() {
+        return supplier;
     }
 
-    public void setAmountRemaining(String amountRemaining) {
-        this.amountRemaining = amountRemaining;
+    public void setSupplier(int supplier) {
+        this.supplier = supplier;
+    }
+
+    @Basic
+    @Column(name = "amountremaining")
+    public String getAmountremaining() {
+        return amountremaining;
+    }
+
+    public void setAmountremaining(String amountremaining) {
+        this.amountremaining = amountremaining;
+    }
+
+    @Basic
+    @Column(name = "unitprice")
+    public int getUnitprice() {
+        return unitprice;
+    }
+
+    public void setUnitprice(int unitprice) {
+        this.unitprice = unitprice;
     }
 
     @Override
@@ -60,11 +82,11 @@ public class StockEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         StockEntity that = (StockEntity) o;
-        return id == that.id && Objects.equals(name, that.name) && Objects.equals(itemCode, that.itemCode) && Objects.equals(amountRemaining, that.amountRemaining);
+        return id == that.id && supplier == that.supplier && unitprice == that.unitprice && Objects.equals(name, that.name) && Objects.equals(itemcode, that.itemcode) && Objects.equals(amountremaining, that.amountremaining);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, itemCode, amountRemaining);
+        return Objects.hash(id, name, itemcode, supplier, amountremaining, unitprice);
     }
 }

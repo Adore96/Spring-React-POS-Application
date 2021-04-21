@@ -1,33 +1,32 @@
 import axios from "axios";
 
-// TODO
-const USERS_LIST_API = 'http://localhost:8090/api/v1/users';
-const ADDUSER_REST_API = 'http://localhost:8090/api/v1/add';
-const UPDATE_USER_REST_API = 'http://localhost:8090/api/v1/updateuser';
-const DELETE_USER_REST_API = 'http://localhost:8090/api/v1/deleteuser';
-const GET_USER_REST_API = 'http://localhost:8090/api/v1/users/';
+const STOCKS_LIST_API = 'http://localhost:8090/api/v1/stocks';
+const ADDSTOCK_REST_API = 'http://localhost:8090/api/v1/addstock';
+const UPDATE_STOCK_REST_API = 'http://localhost:8090/api/v1/updatestock';
+const DELETE_STOCK_REST_API = 'http://localhost:8090/api/v1/deletestock';
+const GET_STOCK_REST_API = 'http://localhost:8090/api/v1/stocks/';
 
-class UserService {
-    getUsers() {
-        return axios.get(USERS_LIST_API);
+class StockService {
+    getStocks() {
+        return axios.get(STOCKS_LIST_API);
     }
 
-    addUser(user) {
-        return axios.post(ADDUSER_REST_API, user);
+    addStock(stock) {
+        return axios.post(ADDSTOCK_REST_API, stock);
     }
 
-    updateUser(user, userid) {
-        console.log(userid, user);
-        return axios.post(UPDATE_USER_REST_API + '/' + userid, user);
+    updateStock(stock, stockid) {
+        console.log(stockid, stock);
+        return axios.post(UPDATE_STOCK_REST_API + '/' + stockid, stock);
     }
 
-    getUser(userId) {
-        return axios.get(GET_USER_REST_API + userId);
+    getStock(stockId) {
+        return axios.get(GET_STOCK_REST_API + stockId);
     }
 
-    deleteUser(userId) {
-        return axios.get(DELETE_USER_REST_API + '/' + userId);
+    deleteStock(stockId) {
+        return axios.get(DELETE_STOCK_REST_API + '/' + stockId);
     }
 }
 
-export default new UserService();
+export default new StockService();

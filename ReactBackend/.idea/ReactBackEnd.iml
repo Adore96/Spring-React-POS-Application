@@ -15,7 +15,7 @@
         <setting name="validation-enabled" value="true" />
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
-          <factory-entry name="ReactBackEnd" />
+          <factory-entry name="ReactBackEnd" value="40f49c74-7ae6-4f85-8b70-5ef053cf48c2" />
           <factory-entry name="entityManagerFactory" />
           <factory-entry name="noname-a.xml@0" value="7824cbb4-cf8d-4de0-aa47-6e6203de61d5" />
         </datasource-mapping>

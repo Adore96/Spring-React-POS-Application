@@ -1,6 +1,6 @@
 import React from 'react';
-import userService from "../services/UserService";
-import UserService from "../services/UserService";
+import userService from "../../services/UserService";
+import UserService from "../../services/UserService";
 
 class UserListComponent extends React.Component {
 

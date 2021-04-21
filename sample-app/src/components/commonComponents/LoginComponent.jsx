@@ -2,8 +2,8 @@ import React, {Component} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button} from "react-bootstrap";
 import Form from "react-bootstrap/Form";
-import "../css/Login.css"
-import UserService from "../services/UserService";
+import "../../css/Login.css"
+import UserService from "../../services/UserService";
 
 class LoginComponent extends Component {
 
