@@ -7,13 +7,6 @@
     <list default="true" id="974d01d3-6973-418e-9f6f-713ad5ff70c2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sample-app/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/node_modules/.cache/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/commonComponents/HeaderComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/commonComponents/HeaderComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/stockComponents/AddStockComponent.Jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/stockComponents/AddStockComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/stockComponents/UpdateStockComponent.Jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/stockComponents/UpdateStockComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/stockComponents/ViewStockComponent.Jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/stockComponents/ViewStockComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/userComponents/UpdateUserComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/userComponents/UpdateUserComponent.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/userComponents/UserListComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/userComponents/UserListComponent.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -68,6 +61,17 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ReactBackEndApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="ReactBackEnd" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.adore96.ReactBackEnd.ReactBackEndApplication" />
@@ -103,7 +107,7 @@
       <workItem from="1617679245359" duration="1208000" />
       <workItem from="1618823872804" duration="5054000" />
       <workItem from="1618888183034" duration="11509000" />
-      <workItem from="1618974626267" duration="5083000" />
+      <workItem from="1618974626267" duration="7077000" />
     </task>
     <servers />
   </component>
