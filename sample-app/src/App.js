@@ -8,8 +8,9 @@ import UpdateUserComponent from "./components/userComponents/UpdateUserComponent
 import ViewUserComponent from "./components/userComponents/ViewUserComponent";
 import LoginComponent from "./components/commonComponents/LoginComponent";
 import StocksListComponent from "./components/stockComponents/StocksListComponent";
+import UpdateStockComponent from "./components/stockComponents/UpdateStockComponent";
 import SuppliersListComponent from "./components/supplierComponent/SuppliersListComponent";
-import UpdateStockComponent from "./components/stockComponents/UpdateStockComponent.Jsx";
+import ViewStockComponent from "./components/stockComponents/ViewStockComponent";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                         {/*stock actions*/}
                         <Route path="/stocks" component={StocksListComponent}/>
                         <Route path="/update-stock/:id" component={UpdateStockComponent}/>
+                        <Route path="/view-stock/:id" component={ViewStockComponent}/>
                         <Route path="/suppliers" component={SuppliersListComponent}/>
                     </Switch>
                 </div>

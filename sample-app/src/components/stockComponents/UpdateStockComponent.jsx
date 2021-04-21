@@ -16,7 +16,7 @@ class UpdateStockComponent extends Component {
     }
 
     componentDidMount() {
-        console.log(this.state.id);
+
         //then refers with a JS Promise
         StockService.getStock(this.state.id).then((res) => {
                 let stock = res.data;

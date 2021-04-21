@@ -12,13 +12,6 @@ class UpdateUserComponent extends Component {
             password: '',
             telephone: ''
         }
-
-        //binding eventHandler to the Component.
-        // this.changeUsernamehandler = this.changeUsernamehandler.bind(this);
-        // this.changeEmailhandler = this.changeEmailhandler.bind(this);
-        // this.changePasswordhandler = this.changePasswordhandler.bind(this);
-        // this.changeTelephonehandler = this.changeTelephonehandler.bind(this);
-        // this.updateUser = this.updateUser.bind(this);
     }
 
     componentDidMount() {

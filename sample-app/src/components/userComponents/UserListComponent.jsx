@@ -9,22 +9,19 @@ class UserListComponent extends React.Component {
         this.state = {
             users: []
         }
-        this.updateUser = this.updateUser.bind(this);
-        this.deleteUser = this.deleteUser.bind(this);
-        this.viewUser = this.viewUser.bind(this);
     }
 
-    updateUser(id) {
+    updateUser=(id)=> {
         this.props.history.push(`/update-user/${id}`);
     }
 
-    deleteUser(id) {
+    deleteUser=(id)=> {
         UserService.deleteUser(id).then(res => {
             this.setState({users: this.state.users.filter(user => user.id !== id)});
         })
     }
 
-    viewUser(id) {
+    viewUser=(id)=> {
         this.props.history.push(`/view-user/${id}`);
     }
 
