@@ -11,6 +11,10 @@ import StocksListComponent from "./components/stockComponents/StocksListComponen
 import UpdateStockComponent from "./components/stockComponents/UpdateStockComponent";
 import SuppliersListComponent from "./components/supplierComponent/SuppliersListComponent";
 import ViewStockComponent from "./components/stockComponents/ViewStockComponent";
+import AddStockComponent from "./components/stockComponents/AddStockComponent";
+import UpdateSupplierComponent from "./components/supplierComponent/UpdateSupplierComponent";
+import ViewSupplierComponent from "./components/supplierComponent/ViewSupplierComponent";
+import AddSupplierComponent from "./components/supplierComponent/AddSupplierComponent";
 
 
 function App() {
@@ -23,17 +27,25 @@ function App() {
                     <Switch>
                         <Route path="/login" component={LoginComponent}/>
                         <Route path="/" exact component={UserListComponent}/>
+
                         {/*user actions*/}
                         <Route path="/users" component={UserListComponent}/>
                         <Route path="/add-user" component={AddUserComponent}/>
                         <Route path="/update-user/:id" component={UpdateUserComponent}/>
                         <Route path="/delete-user/:id" component={UserListComponent}/>
                         <Route path="/view-user/:id" component={ViewUserComponent}/>
+
                         {/*stock actions*/}
                         <Route path="/stocks" component={StocksListComponent}/>
+                        <Route path="/add-user" component={AddStockComponent}/>
                         <Route path="/update-stock/:id" component={UpdateStockComponent}/>
                         <Route path="/view-stock/:id" component={ViewStockComponent}/>
+
+                        {/*supplier actions*/}
                         <Route path="/suppliers" component={SuppliersListComponent}/>
+                        <Route path="/add-supplier" component={AddSupplierComponent}/>
+                        <Route path="/update-supplier/:id" component={UpdateSupplierComponent}/>
+                        <Route path="/view-supplier/:id" component={ViewSupplierComponent}/>
                     </Switch>
                 </div>
 

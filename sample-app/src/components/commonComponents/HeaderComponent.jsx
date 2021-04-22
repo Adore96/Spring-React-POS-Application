@@ -9,23 +9,29 @@ class HeaderComponent extends Component {
         this.state = {}
     }
 
-    addUser=()=> {
+    addUser = () => {
         this.props.history.push('/add-user');
     }
+    addStocks = () => {
+        this.props.history.push('/add-stock');
+    }
+    addSupplier = () => {
+        this.props.history.push('/add-supplier');
+    }
 
-    Users=()=> {
+    Users = () => {
         this.props.history.push('/users');
     }
 
-    login=() =>{
+    login = () => {
         this.props.history.push('/login');
     }
 
-    suppliers=()=> {
+    suppliers = () => {
         this.props.history.push('/suppliers');
     }
 
-    stocks=()=> {
+    stocks = () => {
         this.props.history.push('/stocks');
     }
 
@@ -36,6 +42,12 @@ class HeaderComponent extends Component {
                 <ul className="navbar-nav">
                     <li className="nav-item">
                         <a className="nav-link" onClick={this.addUser}>Add User</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" onClick={this.addStocks}>Add Stock</a>
+                    </li>
+                    <li className="nav-item">
+                        <a className="nav-link" onClick={this.addSupplier}>Add Supplier</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" onClick={this.Users}>UserList</a>

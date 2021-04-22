@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="974d01d3-6973-418e-9f6f-713ad5ff70c2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../sample-app/src/components/supplierComponent/AddSupplierComponent.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../sample-app/src/services/SupplierService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sample-app/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/commonComponents/HeaderComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/commonComponents/HeaderComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/stockComponents/AddStockComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/stockComponents/AddStockComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/supplierComponent/AddSupplierComponent.Jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/supplierComponent/UpdateSupplierComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/supplierComponent/SuppliersListComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/supplierComponent/SuppliersListComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/supplierComponent/UpdateSupplierComponent.Jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/supplierComponent/ViewSupplierComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/supplierComponent/ViewSupplierComponent.Jsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,17 +70,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ReactBackEndApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="ReactBackEnd" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.adore96.ReactBackEnd.ReactBackEndApplication" />
@@ -107,7 +105,8 @@
       <workItem from="1617679245359" duration="1208000" />
       <workItem from="1618823872804" duration="5054000" />
       <workItem from="1618888183034" duration="11509000" />
-      <workItem from="1618974626267" duration="7077000" />
+      <workItem from="1618974626267" duration="7115000" />
+      <workItem from="1619060854284" duration="5781000" />
     </task>
     <servers />
   </component>
