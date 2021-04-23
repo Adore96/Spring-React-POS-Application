@@ -24,6 +24,10 @@ class SuppliersListComponent extends Component {
         this.props.history.push(`/view-supplier/${id}`);
     }
 
+    addSupplier = () => {
+        this.props.history.push('/add-supplier');
+    }
+
     componentDidMount() {
         //then refers with a JS Promise
         SupplierService.getSuppliers().then((response) => {
@@ -34,7 +38,21 @@ class SuppliersListComponent extends Component {
     render() {
         return (
             <div>
-                <h1 className="text-center">Suppliers List</h1>
+
+                <div className="row">
+                    <div className="col-sm-4"></div>
+                    <div className="col-sm-6">
+                        <h1 className="text-left" style={{marginTop: "10px"}}>Suppliers List</h1>
+                    </div>
+                    <div className="col-sm-2">
+                        <button style={{marginTop: "25px"}}
+                                onClick={() => this.addSupplier()}
+                                className="btn btn-primary">Add Supplier
+                        </button>
+                    </div>
+                </div>
+                <br/>
+
                 <table className="table table-striped">
 
                     <thead>

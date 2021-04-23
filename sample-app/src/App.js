@@ -14,7 +14,7 @@ import ViewStockComponent from "./components/stockComponents/ViewStockComponent"
 import AddStockComponent from "./components/stockComponents/AddStockComponent";
 import UpdateSupplierComponent from "./components/supplierComponent/UpdateSupplierComponent";
 import ViewSupplierComponent from "./components/supplierComponent/ViewSupplierComponent";
-import AddSupplierComponent from "./components/supplierComponent/AddSupplierComponent";
+import AddSupplierComponent from "./components/supplierComponent/AddSupplierCompo.jsx";
 
 
 function App() {
@@ -37,7 +37,7 @@ function App() {
 
                         {/*stock actions*/}
                         <Route path="/stocks" component={StocksListComponent}/>
-                        <Route path="/add-user" component={AddStockComponent}/>
+                        <Route path="/add-stock" component={AddStockComponent}/>
                         <Route path="/update-stock/:id" component={UpdateStockComponent}/>
                         <Route path="/view-stock/:id" component={ViewStockComponent}/>
 

@@ -24,6 +24,10 @@ class StocksListComponent extends Component {
         this.props.history.push(`/view-stock/${id}`);
     }
 
+    addStock = () => {
+        this.props.history.push('/add-stock');
+    }
+
     componentDidMount() {
         //then refers with a JS Promise
         StockService.getStocks().then((response) => {
@@ -34,7 +38,19 @@ class StocksListComponent extends Component {
     render() {
         return (
             <div>
-                <h1 className="text-center">Stocks</h1>
+                <div className="row">
+                    <div className="col-sm-4"></div>
+                    <div className="col-sm-6">
+                        <h1 className="text-left" style={{marginTop: "10px"}}>Stocks List</h1>
+                    </div>
+                    <div className="col-sm-2">
+                        <button style={{marginTop: "25px"}}
+                                onClick={() => this.addStock()}
+                                className="btn btn-primary">Add Stock
+                        </button>
+                    </div>
+                </div>
+                <br/>
                 <table className="table table-striped">
 
                     <thead>

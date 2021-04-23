@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
 import {withRouter} from 'react-router-dom';
+import * as ReactBootstrap from 'react-bootstrap';
 
 class HeaderComponent extends Component {
 
@@ -39,27 +40,23 @@ class HeaderComponent extends Component {
         return (
 
             <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
+
+                {/*list pages*/}
+                <ReactBootstrap.Dropdown>
+                    <ReactBootstrap.Dropdown.Toggle variant="success" id="dropdown-basic">
+                        Lists
+                    </ReactBootstrap.Dropdown.Toggle>
+                    <ReactBootstrap.Dropdown.Menu>
+                        <ReactBootstrap.Dropdown.Item onClick={this.Users}>User List</ReactBootstrap.Dropdown.Item>
+                        <ReactBootstrap.Dropdown.Item onClick={this.stocks}>Stock List</ReactBootstrap.Dropdown.Item>
+                        <ReactBootstrap.Dropdown.Item onClick={this.suppliers}>Supplier
+                            List</ReactBootstrap.Dropdown.Item>
+                    </ReactBootstrap.Dropdown.Menu>
+                </ReactBootstrap.Dropdown>
+
                 <ul className="navbar-nav">
                     <li className="nav-item">
                         <a className="nav-link" onClick={this.addUser}>Add User</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" onClick={this.addStocks}>Add Stock</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" onClick={this.addSupplier}>Add Supplier</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" onClick={this.Users}>UserList</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" onClick={this.suppliers}>Suppliers</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" onClick={this.stocks}>Stocks</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" onClick={this.login}>Logout</a>
                     </li>
                 </ul>
             </nav>

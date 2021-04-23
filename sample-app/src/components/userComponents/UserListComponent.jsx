@@ -11,17 +11,17 @@ class UserListComponent extends React.Component {
         }
     }
 
-    updateUser=(id)=> {
+    updateUser = (id) => {
         this.props.history.push(`/update-user/${id}`);
     }
 
-    deleteUser=(id)=> {
+    deleteUser = (id) => {
         UserService.deleteUser(id).then(res => {
             this.setState({users: this.state.users.filter(user => user.id !== id)});
         })
     }
 
-    viewUser=(id)=> {
+    viewUser = (id) => {
         this.props.history.push(`/view-user/${id}`);
     }
 
@@ -32,12 +32,29 @@ class UserListComponent extends React.Component {
         });
     }
 
+    addUser = () => {
+        this.props.history.push('/add-user');
+    }
+
     render() {
         return (
             <div>
-                <h1 className="text-center">Users List</h1>
-                <table className="table table-striped">
 
+                <div className="row">
+                    <div className="col-sm-4"></div>
+                    <div className="col-sm-6">
+                        <h1 className="text-left" style={{marginTop: "10px"}}>Users List</h1>
+                    </div>
+                    <div className="col-sm-2">
+                        <button style={{marginTop: "25px"}}
+                                onClick={() => this.addUser()}
+                                className="btn btn-primary">Add User
+                        </button>
+                    </div>
+                </div>
+                <br/>
+
+                <table className="table table-striped">
                     <thead>
                     <tr>
                         <th>Username</th>

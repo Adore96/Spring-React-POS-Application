@@ -68,8 +68,12 @@ class UpdateStockComponent extends Component {
     }
 
     render() {
+        const mystyle = {
+            paddingBottom: "70px"
+        };
+
         return (
-            <div className="container">
+            <div className="container" style={mystyle}>
                 <div className="row">
                     <div className="card col-md-6 offset-md-3">
                         <h3 className="text-center">Stock Update Page</h3>
