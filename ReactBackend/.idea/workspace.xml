@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="974d01d3-6973-418e-9f6f-713ad5ff70c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/userController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/userController.java" afterDir="false" />
-    </list>
+    <list default="true" id="974d01d3-6973-418e-9f6f-713ad5ff70c2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -24,7 +22,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1qEofzIl0o6IFFRGIk9howarbLP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -43,12 +43,17 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="com.adore96.ReactBackEnd.mapping" />
+      <recent name="" />
       <recent name="com.adore96.ReactBackEnd.model" />
     </key>
   </component>
@@ -84,7 +89,13 @@
       <workItem from="1617344180966" duration="2245000" />
       <workItem from="1617599438778" duration="2003000" />
       <workItem from="1617603137038" duration="2284000" />
-      <workItem from="1617621880803" duration="591000" />
+      <workItem from="1617621880803" duration="859000" />
+      <workItem from="1617679245359" duration="1208000" />
+      <workItem from="1618823872804" duration="5054000" />
+      <workItem from="1618888183034" duration="11509000" />
+      <workItem from="1618974626267" duration="7115000" />
+      <workItem from="1619060854284" duration="8182000" />
+      <workItem from="1619151733647" duration="6450000" />
     </task>
     <servers />
   </component>
