@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import StockService from "../../services/StockService";
+import ItemService from "../../services/ItemService";
 
 class ViewItemComponent extends Component {
 
@@ -7,32 +7,32 @@ class ViewItemComponent extends Component {
         super(props);
         this.state = {
             id: this.props.match.params.id,
-            stock: {},
-            supplierName:''
+            item: {},
+            supplierName: ''
         }
     }
 
     componentDidMount() {
         //then refers with a JS Promise
-        StockService.getStock(this.state.id).then((res) => {
-                let stock = res.data;
+        ItemService.getItem(this.state.id).then((res) => {
+                let item = res.data;
                 this.setState({
-                    name: stock.name,
-                    itemcode: stock.itemcode,
-                    supplier: stock.supplier,
-                    amountremaining: stock.amountremaining,
-                    unitprice: stock.unitprice,
+                    name: item.name,
+                    itemcode: item.itemcode,
+                    supplier: item.supplier,
+                    amountremaining: item.amountremaining,
+                    unitprice: item.unitprice,
                 })
 
-            StockService.getStockSupplier(res.data.supplier).then((response) => {
-                this.setState({supplierName: response.data})
-            })
+                ItemService.getItemSupplier(res.data.supplier).then((response) => {
+                    this.setState({supplierName: response.data})
+                })
             }
         );
     }
 
     cancel() {
-        this.props.history.push('/stocks');
+        this.props.history.push('/items');
     }
 
     render() {

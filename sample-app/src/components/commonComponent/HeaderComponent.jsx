@@ -13,8 +13,8 @@ class HeaderComponent extends Component {
     addUser = () => {
         this.props.history.push('/add-user');
     }
-    addStocks = () => {
-        this.props.history.push('/add-stock');
+    addItems = () => {
+        this.props.history.push('/add-item');
     }
     addSupplier = () => {
         this.props.history.push('/add-supplier');
@@ -36,8 +36,8 @@ class HeaderComponent extends Component {
         this.props.history.push('/bills');
     }
 
-    stocks = () => {
-        this.props.history.push('/stocks');
+    items = () => {
+        this.props.history.push('/items');
     }
 
     render() {
@@ -52,7 +52,7 @@ class HeaderComponent extends Component {
                     </ReactBootstrap.Dropdown.Toggle>
                     <ReactBootstrap.Dropdown.Menu>
                         <ReactBootstrap.Dropdown.Item onClick={this.Users}>User List</ReactBootstrap.Dropdown.Item>
-                        <ReactBootstrap.Dropdown.Item onClick={this.stocks}>Item List</ReactBootstrap.Dropdown.Item>
+                        <ReactBootstrap.Dropdown.Item onClick={this.items}>Item List</ReactBootstrap.Dropdown.Item>
                         <ReactBootstrap.Dropdown.Item onClick={this.suppliers}>Supplier List</ReactBootstrap.Dropdown.Item>
                         <ReactBootstrap.Dropdown.Item onClick={this.bills}>Bills</ReactBootstrap.Dropdown.Item>
                     </ReactBootstrap.Dropdown.Menu>

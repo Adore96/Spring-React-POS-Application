@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import StockService from "../../services/StockService";
+import ItemService from "../../services/ItemService";
 
 class UpdateItemComponent extends Component {
 
@@ -18,14 +18,14 @@ class UpdateItemComponent extends Component {
 
     componentDidMount() {
         //then refers with a JS Promise
-        StockService.getStock(this.state.id).then((res) => {
-                let stock = res.data;
+        ItemService.getItem(this.state.id).then((res) => {
+                let item = res.data;
                 this.setState({
-                    name: stock.name,
-                    itemcode: stock.itemcode,
-                    supplier: stock.supplier,
-                    amountremaining: stock.amountremaining,
-                    unitprice: stock.unitprice,
+                    name: item.name,
+                    itemcode: item.itemcode,
+                    supplier: item.supplier,
+                    amountremaining: item.amountremaining,
+                    unitprice: item.unitprice,
                 })
                 this.setSupplierName(res);
             }
@@ -33,24 +33,24 @@ class UpdateItemComponent extends Component {
     }
 
     setSupplierName(res) {
-        StockService.getStockSupplier(res.data.supplier).then((response) => {
+        ItemService.getItemSupplier(res.data.supplier).then((response) => {
             this.setState({supplierName: response.data})
         })
     }
-    
-    updateStock = (event) => {
+
+    updateItem = (event) => {
         event.preventDefault();
-        let stock = {
+        let item = {
             name: this.state.name,
             itemcode: this.state.itemcode,
             supplier: this.state.supplier,
             amountremaining: this.state.amountremaining,
             unitprice: this.state.unitprice
         };
-        console.log('Stock => ' + JSON.stringify(stock));
+        console.log('Item => ' + JSON.stringify(item));
 
-        StockService.updateStock(stock, this.state.id).then(res => {
-            this.props.history.push('/stocks');
+        ItemService.updateItem(item, this.state.id).then(res => {
+            this.props.history.push('/items');
         });
     }
 
@@ -71,16 +71,16 @@ class UpdateItemComponent extends Component {
     }
 
     cancel() {
-        this.props.history.push('/stocks');
+        this.props.history.push('/items');
     }
 
     render() {
-        const mystyle = {
+        const LowerBound = {
             paddingBottom: "70px"
         };
 
         return (
-            <div className="container" style={mystyle}>
+            <div className="container" style={LowerBound}>
                 <div className="row">
                     <div className="card col-md-6 offset-md-3">
                         <h3 className="text-center">Update Item Page</h3>
@@ -117,7 +117,7 @@ class UpdateItemComponent extends Component {
                                            className="form-control"
                                            value={this.state.unitprice} onChange={this.changeUnitPriceHandler}/>
                                 </div>
-                                <button className="Btn btn-success" onClick={this.updateStock}>Update</button>
+                                <button className="Btn btn-success" onClick={this.updateItem}>Update</button>
                                 <button className="Btn btn-danger" onClick={this.cancel.bind(this)}
                                         style={{marginLeft: "10px"}}>Cancel
                                 </button>

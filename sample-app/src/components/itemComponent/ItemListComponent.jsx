@@ -1,39 +1,39 @@
 import React, {Component} from 'react';
-import StockService from "../../services/StockService";
+import ItemService from "../../services/ItemService";
 
 class ItemListComponent extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            stocks: [],
+            items: [],
             supplierName: ''
         }
     }
 
-    updateStock = (id) => {
-        this.props.history.push(`/update-stock/${id}`);
+    updateItem = (id) => {
+        this.props.history.push(`/update-item/${id}`);
     }
 
-    deleteStock = (id) => {
-        StockService.deleteStock(id).then(res => {
-            this.setState({stocks: this.state.stocks.filter(stock => stock.id !== id)});
+    deleteItem = (id) => {
+        ItemService.deleteItem(id).then(res => {
+            this.setState({items: this.state.items.filter(item => item.id !== id)});
         })
     }
 
-    viewStock = (id) => {
-        this.props.history.push(`/view-stock/${id}`);
+    viewItem = (id) => {
+        this.props.history.push(`/view-item/${id}`);
     }
 
-    addStock = () => {
-        this.props.history.push('/add-stock');
+    addItem = () => {
+        this.props.history.push('/add-item');
     }
 
     componentDidMount() {
         //then refers with a JS Promise
-        StockService.getStocks().then((response) => {
+        ItemService.getItems().then((response) => {
             this.setState({
-                stocks: response.data
+                items: response.data
             })
         });
     }
@@ -48,7 +48,7 @@ class ItemListComponent extends Component {
                     </div>
                     <div className="col-sm-2">
                         <button style={{marginTop: "25px"}}
-                                onClick={() => this.addStock()}
+                                onClick={() => this.addItem()}
                                 className="btn btn-primary">Add Item
                         </button>
                     </div>
@@ -69,22 +69,22 @@ class ItemListComponent extends Component {
 
                     <tbody>
                     {
-                        this.state.stocks.map(
-                            stock =>
-                                <tr key={stock.id}>
-                                    <td>{stock.itemcode}</td>
-                                    <td>{stock.name}</td>
-                                    <td>{stock.amountremaining}</td>
-                                    <td>{stock.unitprice}</td>
-                                    <td>{stock.supplier}</td>
+                        this.state.items.map(
+                            item =>
+                                <tr key={item.id}>
+                                    <td>{item.itemcode}</td>
+                                    <td>{item.name}</td>
+                                    <td>{item.amountremaining}</td>
+                                    <td>{item.unitprice}</td>
+                                    <td>{item.supplier}</td>
                                     <td>
-                                        <button onClick={() => this.updateStock(stock.id)}
+                                        <button onClick={() => this.updateItem(item.id)}
                                                 className="btn btn-outline-info">Update
                                         </button>
-                                        <button style={{marginLeft: "10px"}} onClick={() => this.deleteStock(stock.id)}
+                                        <button style={{marginLeft: "10px"}} onClick={() => this.deleteItem(item.id)}
                                                 className="btn btn-outline-danger">Delete
                                         </button>
-                                        <button style={{marginLeft: "10px"}} onClick={() => this.viewStock(stock.id)}
+                                        <button style={{marginLeft: "10px"}} onClick={() => this.viewItem(item.id)}
                                                 className="btn btn-outline-success">View Details
                                         </button>
                                     </td>

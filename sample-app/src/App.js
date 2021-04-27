@@ -38,10 +38,10 @@ function App() {
                         <Route path="/view-user/:id" component={ViewUserComponent}/>
 
                         {/*stock actions*/}
-                        <Route path="/stocks" component={ItemListComponent}/>
-                        <Route path="/add-stock" component={AddItemComponent}/>
-                        <Route path="/update-stock/:id" component={UpdateItemComponent}/>
-                        <Route path="/view-stock/:id" component={ViewItemComponent}/>
+                        <Route path="/items" component={ItemListComponent}/>
+                        <Route path="/add-item" component={AddItemComponent}/>
+                        <Route path="/update-item/:id" component={UpdateItemComponent}/>
+                        <Route path="/view-item/:id" component={ViewItemComponent}/>
 
                         {/*supplier actions*/}
                         <Route path="/suppliers" component={SuppliersListComponent}/>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import StockService from "../../services/StockService";
+import ItemService from "../../services/ItemService";
 import SupplierService from "../../services/SupplierService";
 
 class AddItemComponent extends Component {
@@ -17,19 +17,19 @@ class AddItemComponent extends Component {
         }
     }
 
-    saveStock = (event) => {
+    saveItem = (event) => {
         event.preventDefault();
-        let stock = {
+        let item = {
             name: this.state.name,
             itemcode: this.state.itemcode,
             supplier: this.state.supplier,
             amountremaining: this.state.amountremaining,
             unitprice: this.state.unitprice
         };
-        console.log('Stock => ' + JSON.stringify(stock));
+        console.log('Item => ' + JSON.stringify(item));
 
-        StockService.addStock(stock).then(res => {
-            this.props.history.push('/stocks');
+        ItemService.addItem(item).then(res => {
+            this.props.history.push('/items');
         });
     }
 
@@ -101,7 +101,7 @@ class AddItemComponent extends Component {
     }
 
     cancel() {
-        this.props.history.push('/stocks');
+        this.props.history.push('/items');
     }
 
     render() {
@@ -153,7 +153,7 @@ class AddItemComponent extends Component {
                                            className="form-control"
                                            value={this.state.unitprice} onChange={this.changeUnitPriceHandler}/>
                                 </div>
-                                <button className="Btn btn-success" onClick={this.saveStock}>Save</button>
+                                <button className="Btn btn-success" onClick={this.saveItem}>Save</button>
                                 <button className="Btn btn-danger" onClick={this.cancel.bind(this)}
                                         style={{marginLeft: "10px"}}>Cancel
                                 </button>
