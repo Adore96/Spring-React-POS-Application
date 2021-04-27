@@ -6,7 +6,9 @@ On 4/20/2021
 */
 
 import com.adore96.ReactBackEnd.mapping.StockEntity;
+import com.adore96.ReactBackEnd.mapping.SupplierEntity;
 import com.adore96.ReactBackEnd.repository.StockRepository;
+import com.adore96.ReactBackEnd.repository.SupplierRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,15 +25,18 @@ public class StockController {
     @Autowired
     StockRepository stockRepository;
 
+    @Autowired
+    SupplierRepository supplierRepository;
+
     //list of stocks
-    @RequestMapping("/stocks")
+    @RequestMapping("/items")
     public List<StockEntity> getStocks() {
         System.out.println("ListStock method");
         return stockRepository.findAll();
     }
 
     //add stock
-    @PostMapping("/addstock")
+    @PostMapping("/additem")
     public StockEntity addstock(@RequestBody StockEntity stockEntity) {
         System.out.println("AddStock Method");
         stockRepository.save(stockEntity);
@@ -39,7 +44,7 @@ public class StockController {
     }
 
     //delete stock by id
-    @RequestMapping("/deletestock/{id}")
+    @RequestMapping("/deleteitem/{id}")
     public ResponseEntity<Map<String, Boolean>> deleteStockbyId(@PathVariable Integer id) {
         StockEntity stockEntity = stockRepository.findById(id).orElse(null);
         stockRepository.delete(stockEntity);
@@ -49,7 +54,7 @@ public class StockController {
     }
 
     //update stock rest api
-    @PostMapping("/updatestock/{id}")
+    @PostMapping("/updateitem/{id}")
     public StockEntity updatestock(@PathVariable Integer id, @RequestBody StockEntity newStockEntity) {
         StockEntity stockEntity = stockRepository.findById(id).orElse(null);
 
@@ -63,10 +68,18 @@ public class StockController {
         return updatedStockEntity;
     }
 
-    @GetMapping("/stocks/{id}")
+    @GetMapping("/items/{id}")
     public StockEntity getStockbyId(@PathVariable Integer id) {
         System.out.println("getStockbyId Method Controller");
         StockEntity stockEntity = stockRepository.findById(id).orElse(null);
         return stockEntity;
+    }
+
+    @RequestMapping("/itemsupplier/{id}")
+    public String StockSupplier(@PathVariable Integer id) {
+        System.out.println("get StockSupplier by supplier id Method Controller");
+        SupplierEntity supplierEntity = supplierRepository.findById(id).orElse(null);
+        String supplierName = supplierEntity.getName();
+        return supplierName;
     }
 }

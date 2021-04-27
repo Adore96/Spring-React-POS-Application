@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="974d01d3-6973-418e-9f6f-713ad5ff70c2" name="Default Changelist" comment="" />
+    <list default="true" id="974d01d3-6973-418e-9f6f-713ad5ff70c2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5fa32d7a-89ef-4a5a-80c6-043c76f6ab6e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5fa32d7a-89ef-4a5a-80c6-043c76f6ab6e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/StockController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/controller/StockController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/controller/StockController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/node_modules/.cache/.eslintcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/commonComponent/HeaderComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/commonComponent/HeaderComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/itemComponent/AddItemComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/itemComponent/AddItemComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/itemComponent/ItemListComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/itemComponent/ItemListComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/itemComponent/UpdateItemComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/itemComponent/UpdateItemComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/itemComponent/ViewItemComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/itemComponent/ViewItemComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/supplierComponent/ViewSupplierComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/supplierComponent/ViewSupplierComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/services/StockService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/services/ItemService.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -49,6 +63,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="ImportMappingsDialog.RecentPackages">
@@ -58,6 +73,17 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ReactBackEndApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="ReactBackEnd" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.adore96.ReactBackEnd.ReactBackEndApplication" />
@@ -95,7 +121,9 @@
       <workItem from="1618888183034" duration="11509000" />
       <workItem from="1618974626267" duration="7115000" />
       <workItem from="1619060854284" duration="8182000" />
-      <workItem from="1619151733647" duration="6450000" />
+      <workItem from="1619151733647" duration="6873000" />
+      <workItem from="1619493083698" duration="39000" />
+      <workItem from="1619493153574" duration="11821000" />
     </task>
     <servers />
   </component>

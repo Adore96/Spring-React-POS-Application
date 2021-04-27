@@ -1,20 +1,22 @@
 import React from 'react'
-import HeaderComponent from "./components/commonComponents/HeaderComponent";
-import UserListComponent from "./components/userComponents/UserListComponent";
-import FooterComponent from "./components/commonComponents/FooterComponent";
+import HeaderComponent from "./components/commonComponent/HeaderComponent";
+import UserListComponent from "./components/userComponent/UserListComponent";
+import FooterComponent from "./components/commonComponent/FooterComponent";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import AddUserComponent from "./components/userComponents/AddUserComponent";
-import UpdateUserComponent from "./components/userComponents/UpdateUserComponent";
-import ViewUserComponent from "./components/userComponents/ViewUserComponent";
-import LoginComponent from "./components/commonComponents/LoginComponent";
-import StocksListComponent from "./components/stockComponents/StocksListComponent";
-import UpdateStockComponent from "./components/stockComponents/UpdateStockComponent";
+import AddUserComponent from "./components/userComponent/AddUserComponent";
+import UpdateUserComponent from "./components/userComponent/UpdateUserComponent";
+import ViewUserComponent from "./components/userComponent/ViewUserComponent";
+import LoginComponent from "./components/commonComponent/LoginComponent";
+import ItemListComponent from "./components/itemComponent/ItemListComponent";
+import UpdateItemComponent from "./components/itemComponent/UpdateItemComponent";
 import SuppliersListComponent from "./components/supplierComponent/SuppliersListComponent";
-import ViewStockComponent from "./components/stockComponents/ViewStockComponent";
-import AddStockComponent from "./components/stockComponents/AddStockComponent";
+import ViewItemComponent from "./components/itemComponent/ViewItemComponent";
+import AddItemComponent from "./components/itemComponent/AddItemComponent";
 import UpdateSupplierComponent from "./components/supplierComponent/UpdateSupplierComponent";
 import ViewSupplierComponent from "./components/supplierComponent/ViewSupplierComponent";
 import AddSupplierComponent from "./components/supplierComponent/AddSupplierCompo.jsx";
+import ViewBillListComponent from "./components/billComponent/ViewBillListComponent";
+import ViewSingleBillComponent from "./components/billComponent/ViewSingleBillComponent";
 
 
 function App() {
@@ -36,16 +38,21 @@ function App() {
                         <Route path="/view-user/:id" component={ViewUserComponent}/>
 
                         {/*stock actions*/}
-                        <Route path="/stocks" component={StocksListComponent}/>
-                        <Route path="/add-stock" component={AddStockComponent}/>
-                        <Route path="/update-stock/:id" component={UpdateStockComponent}/>
-                        <Route path="/view-stock/:id" component={ViewStockComponent}/>
+                        <Route path="/items" component={ItemListComponent}/>
+                        <Route path="/add-item" component={AddItemComponent}/>
+                        <Route path="/update-item/:id" component={UpdateItemComponent}/>
+                        <Route path="/view-item/:id" component={ViewItemComponent}/>
 
                         {/*supplier actions*/}
                         <Route path="/suppliers" component={SuppliersListComponent}/>
                         <Route path="/add-supplier" component={AddSupplierComponent}/>
                         <Route path="/update-supplier/:id" component={UpdateSupplierComponent}/>
                         <Route path="/view-supplier/:id" component={ViewSupplierComponent}/>
+
+                        {/*Bills*/}
+                        <Route path="/bils" component={ViewBillListComponent}/>
+                        <Route path="/view-bill" component={ViewSingleBillComponent}/>
+
                     </Switch>
                 </div>
 

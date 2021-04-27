@@ -1,8 +1,7 @@
-package com.adore96.ReactBackEnd.mapping;
-/*
+package com.adore96.ReactBackEnd.mapping;/*
 kasun_k 
 Project ReactBackEnd
-On 3/25/2021
+On 4/27/2021
 */
 
 import javax.persistence.*;
@@ -16,11 +15,10 @@ public class UserEntity {
     private String username;
     private String email;
     private String password;
-    private int userid;
     private String createdtime;
     private String fname;
     private String lname;
-    private Integer roleid;
+    private Integer designation;
     private Integer telephone;
     private Timestamp timestamp;
 
@@ -65,16 +63,6 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "userid")
-    public int getUserid() {
-        return userid;
-    }
-
-    public void setUserid(int userid) {
-        this.userid = userid;
-    }
-
-    @Basic
     @Column(name = "createdtime")
     public String getCreatedtime() {
         return createdtime;
@@ -105,13 +93,13 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "roleid")
-    public Integer getRoleid() {
-        return roleid;
+    @Column(name = "designation")
+    public Integer getDesignation() {
+        return designation;
     }
 
-    public void setRoleid(Integer roleid) {
-        this.roleid = roleid;
+    public void setDesignation(Integer designation) {
+        this.designation = designation;
     }
 
     @Basic
@@ -139,11 +127,11 @@ public class UserEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UserEntity that = (UserEntity) o;
-        return id == that.id && userid == that.userid && Objects.equals(username, that.username) && Objects.equals(email, that.email) && Objects.equals(password, that.password) && Objects.equals(createdtime, that.createdtime) && Objects.equals(fname, that.fname) && Objects.equals(lname, that.lname) && Objects.equals(roleid, that.roleid) && Objects.equals(telephone, that.telephone) && Objects.equals(timestamp, that.timestamp);
+        return id == that.id && Objects.equals(username, that.username) && Objects.equals(email, that.email) && Objects.equals(password, that.password) && Objects.equals(createdtime, that.createdtime) && Objects.equals(fname, that.fname) && Objects.equals(lname, that.lname) && Objects.equals(designation, that.designation) && Objects.equals(telephone, that.telephone) && Objects.equals(timestamp, that.timestamp);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, username, email, password, userid, createdtime, fname, lname, roleid, telephone, timestamp);
+        return Objects.hash(id, username, email, password, createdtime, fname, lname, designation, telephone, timestamp);
     }
 }
