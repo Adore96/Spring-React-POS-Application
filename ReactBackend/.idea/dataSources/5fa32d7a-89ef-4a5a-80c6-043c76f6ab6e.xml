@@ -1318,36 +1318,31 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="361" parent="340" name="userid">
+    <column id="361" parent="340" name="createdtime">
       <Position>5</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="362" parent="340" name="createdtime">
+    <column id="362" parent="340" name="fname">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="363" parent="340" name="fname">
+    <column id="363" parent="340" name="lname">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="364" parent="340" name="lname">
+    <column id="364" parent="340" name="designation">
       <Position>8</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>int(11)|0s</DataType>
     </column>
-    <column id="365" parent="340" name="roleid">
+    <column id="365" parent="340" name="telephone">
       <Position>9</Position>
       <DataType>int(11)|0s</DataType>
     </column>
-    <column id="366" parent="340" name="telephone">
+    <column id="366" parent="340" name="timestamp">
       <Position>10</Position>
-      <DataType>int(11)|0s</DataType>
-    </column>
-    <column id="367" parent="340" name="timestamp">
-      <Position>11</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <key id="368" parent="340" name="PRIMARY">
+    <key id="367" parent="340" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

@@ -42,7 +42,7 @@ class SuppliersListComponent extends Component {
                 <div className="row">
                     <div className="col-sm-4"></div>
                     <div className="col-sm-6">
-                        <h1 className="text-left" style={{marginTop: "10px"}}>Suppliers List</h1>
+                        <h1 className="text-left" style={{marginTop: "10px"}}>Supplier List</h1>
                     </div>
                     <div className="col-sm-2">
                         <button style={{marginTop: "25px"}}

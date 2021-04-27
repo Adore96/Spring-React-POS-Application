@@ -5,6 +5,7 @@ const ADDSTOCK_REST_API = 'http://localhost:8090/api/v1/addstock';
 const UPDATE_STOCK_REST_API = 'http://localhost:8090/api/v1/updatestock';
 const DELETE_STOCK_REST_API = 'http://localhost:8090/api/v1/deletestock';
 const GET_STOCK_REST_API = 'http://localhost:8090/api/v1/stocks/';
+const GET_STOCK_SUPPLIER_REST_API = 'http://localhost:8090/api/v1/stocksupplier';
 
 class StockService {
     getStocks() {
@@ -26,6 +27,10 @@ class StockService {
 
     deleteStock(stockId) {
         return axios.get(DELETE_STOCK_REST_API + '/' + stockId);
+    }
+
+    getStockSupplier(supplierId) {
+        return axios.get(GET_STOCK_SUPPLIER_REST_API + '/' + supplierId);
     }
 }
 

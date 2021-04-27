@@ -6,7 +6,9 @@ On 4/20/2021
 */
 
 import com.adore96.ReactBackEnd.mapping.StockEntity;
+import com.adore96.ReactBackEnd.mapping.SupplierEntity;
 import com.adore96.ReactBackEnd.repository.StockRepository;
+import com.adore96.ReactBackEnd.repository.SupplierRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,6 +24,9 @@ public class StockController {
 
     @Autowired
     StockRepository stockRepository;
+
+    @Autowired
+    SupplierRepository supplierRepository;
 
     //list of stocks
     @RequestMapping("/stocks")
@@ -68,5 +73,13 @@ public class StockController {
         System.out.println("getStockbyId Method Controller");
         StockEntity stockEntity = stockRepository.findById(id).orElse(null);
         return stockEntity;
+    }
+
+    @RequestMapping("/stocksupplier/{id}")
+    public String StockSupplier(@PathVariable Integer id) {
+        System.out.println("get StockSupplier by supplier id Method Controller");
+        SupplierEntity supplierEntity = supplierRepository.findById(id).orElse(null);
+        String supplierName = supplierEntity.getName();
+        return supplierName;
     }
 }
