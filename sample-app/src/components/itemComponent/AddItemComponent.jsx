@@ -55,6 +55,7 @@ class AddItemComponent extends Component {
     }
     changeSupplierHandler = (event) => {
         this.setState({supplier: event.target.value});
+        console.log(this.state.supplier);
     }
     changeAmountremainingHandler = (event) => {
         this.setState({amountremaining: event.target.value});

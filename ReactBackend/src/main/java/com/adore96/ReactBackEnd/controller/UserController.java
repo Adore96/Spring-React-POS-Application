@@ -7,6 +7,7 @@ On 3/25/2021
 
 import com.adore96.ReactBackEnd.mapping.UserEntity;
 import com.adore96.ReactBackEnd.repository.UserRepository;
+import com.adore96.ReactBackEnd.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,9 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
+    @Autowired
+    UserService userService;
+
     //list of users
     @RequestMapping("/users")
     public List<UserEntity> getUsers() {
@@ -33,8 +37,8 @@ public class UserController {
     //add user
     @PostMapping("/adduser")
     public UserEntity addEmployee(@RequestBody UserEntity userEntity) {
-        System.out.println("ListUser Method");
-        userRepository.save(userEntity);
+        System.out.println("Add Uer Method");
+        userRepository.save(userService.createUser(userEntity));
         return userEntity;
     }
 

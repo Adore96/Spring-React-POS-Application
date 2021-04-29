@@ -15,7 +15,7 @@ import AddItemComponent from "./components/itemComponent/AddItemComponent";
 import UpdateSupplierComponent from "./components/supplierComponent/UpdateSupplierComponent";
 import ViewSupplierComponent from "./components/supplierComponent/ViewSupplierComponent";
 import AddSupplierComponent from "./components/supplierComponent/AddSupplierCompo.jsx";
-import ViewBillListComponent from "./components/billComponent/ViewBillListComponent";
+import BillListComponent from "./components/billComponent/BillListComponent";
 import ViewSingleBillComponent from "./components/billComponent/ViewSingleBillComponent";
 
 
@@ -50,7 +50,7 @@ function App() {
                         <Route path="/view-supplier/:id" component={ViewSupplierComponent}/>
 
                         {/*Bills*/}
-                        <Route path="/bils" component={ViewBillListComponent}/>
+                        <Route path="/bills" component={BillListComponent}/>
                         <Route path="/view-bill" component={ViewSingleBillComponent}/>
 
                     </Switch>

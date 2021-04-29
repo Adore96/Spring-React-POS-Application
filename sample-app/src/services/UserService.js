@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const USERS_LIST_API = 'http://localhost:8090/api/v1/users';
-const ADDUSER_REST_API = 'http://localhost:8090/api/v1/add';
+const ADDUSER_REST_API = 'http://localhost:8090/api/v1/adduser';
 const UPDATE_USER_REST_API = 'http://localhost:8090/api/v1/updateuser';
 const DELETE_USER_REST_API = 'http://localhost:8090/api/v1/deleteuser';
 const GET_USER_REST_API = 'http://localhost:8090/api/v1/users/';

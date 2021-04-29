@@ -9,6 +9,7 @@ import com.adore96.ReactBackEnd.mapping.StockEntity;
 import com.adore96.ReactBackEnd.mapping.SupplierEntity;
 import com.adore96.ReactBackEnd.repository.StockRepository;
 import com.adore96.ReactBackEnd.repository.SupplierRepository;
+import com.adore96.ReactBackEnd.util.TimeStampGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -62,7 +63,7 @@ public class StockController {
         stockEntity.setItemcode(newStockEntity.getItemcode());
         stockEntity.setAmountremaining(newStockEntity.getAmountremaining());
         stockEntity.setUnitprice(newStockEntity.getUnitprice());
-        stockEntity.setSupplier(newStockEntity.getSupplier());
+        stockEntity.setSuppliers(newStockEntity.getSuppliers());
 
         StockEntity updatedStockEntity = stockRepository.save(stockEntity);
         return updatedStockEntity;
