@@ -7,7 +7,7 @@ On 4/28/2021
 
 import com.adore96.ReactBackEnd.mapping.BillEntity;
 import com.adore96.ReactBackEnd.repository.BillReposiory;
-import com.adore96.ReactBackEnd.util.TimeStampGenerator;
+import com.adore96.ReactBackEnd.service.BillService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,24 +24,28 @@ public class BillController {
     @Autowired
     BillReposiory billReposiory;
 
+    @Autowired
+    BillService billService;
+
     //list of bills
     @RequestMapping("/bills")
     public List<BillEntity> getBills() {
-        System.out.println("ListBills method");
+        System.out.println("ListBills Controller");
         return billReposiory.findAll();
     }
 
     //add bill
     @PostMapping("/addbill")
     public BillEntity addbill(@RequestBody BillEntity billEntity) {
-        System.out.println("AddBill Method");
-        billReposiory.save(billEntity);
+        System.out.println("AddBill Controller");
+        billReposiory.save(billService.saveBill(billEntity));
         return billEntity;
     }
 
     //delete bill by id
     @RequestMapping("/deletebill/{id}")
     public ResponseEntity<Map<String, Boolean>> deleteBillbyId(@PathVariable Integer id) {
+        System.out.println("Deletebill Controller");
         BillEntity billEntity = billReposiory.findById(id).orElse(null);
         billReposiory.delete(billEntity);
         Map<String, Boolean> response = new HashMap<>();
@@ -52,6 +56,7 @@ public class BillController {
     //update bill rest api
     @PostMapping("/updatebill/{id}")
     public BillEntity updatebill(@PathVariable Integer id, @RequestBody BillEntity newBillEntity) {
+        System.out.println("updatebill Controller");
         BillEntity billEntity = billReposiory.findById(id).orElse(null);
 
         billEntity.setBillamount(newBillEntity.getBillamount());

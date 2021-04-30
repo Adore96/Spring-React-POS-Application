@@ -16,7 +16,7 @@ public class UserService {
     @Autowired
     TimeStampGenerator timeStampGenerator;
 
-    public UserEntity createUser(@RequestBody UserEntity userEntity) {
+    public UserEntity saveUser(@RequestBody UserEntity userEntity) {
         UserEntity newuser = new UserEntity();
         newuser.setUsername(userEntity.getUsername());
         newuser.setEmail(userEntity.getEmail());

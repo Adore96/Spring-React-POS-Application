@@ -38,7 +38,7 @@ public class UserController {
     @PostMapping("/adduser")
     public UserEntity addEmployee(@RequestBody UserEntity userEntity) {
         System.out.println("Add Uer Method");
-        userRepository.save(userService.createUser(userEntity));
+        userRepository.save(userService.saveUser(userEntity));
         return userEntity;
     }
 

@@ -14,8 +14,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.sql.Timestamp;
-import java.util.Date;
 
 @Entity
 @Getter
@@ -28,9 +26,10 @@ public class BillEntity {
     @Id
     @GeneratedValue
     private int id;
+    private String userid_fk;
     private int billamount;
+    private String createdtime;
     private int payment;
     private String paymentmethod;
-    private String date;
 
 }
