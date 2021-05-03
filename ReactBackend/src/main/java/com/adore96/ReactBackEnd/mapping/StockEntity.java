@@ -30,6 +30,6 @@ public class StockEntity {
     private int unitprice;
 
     @OneToMany(targetEntity = SupplierEntity.class, cascade = CascadeType.ALL)
-    @JoinColumn(name = "stockid_fk",referencedColumnName = "id")
+    @JoinColumn(name = "stockidfk",referencedColumnName = "id")
     private List<SupplierEntity> suppliers;
 }

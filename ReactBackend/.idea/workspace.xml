@@ -5,21 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="974d01d3-6973-418e-9f6f-713ad5ff70c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../sample-app/src/components/billComponent/UpdateBillComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/BillController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/BillController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/mapping/BillEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/mapping/BillEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/service/BillService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/service/BillService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/controller/BillController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/controller/BillController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/controller/userController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/controller/userController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/mapping/BillEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/mapping/BillEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/service/BillService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/service/BillService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/mapping/StockEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/mapping/StockEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/mapping/SupplierEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/mapping/SupplierEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/repository/StockRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/repository/StockRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/repository/SupplierRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/repository/SupplierRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ReactBackEnd-0.0.1-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ReactBackEnd-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/controller/StockController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/mapping/StockEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/mapping/StockEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/mapping/SupplierEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/mapping/SupplierEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/repository/SupplierRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/adore96/ReactBackEnd/repository/SupplierRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.adore96.ReactBackEnd.ReactBackEndApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.adore96.ReactBackEnd.ReactBackEndApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.adore96.ReactBackEnd.ReactBackEndApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.adore96.ReactBackEnd.ReactBackEndApplicationTests.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sample-app/node_modules/.cache/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/node_modules/.cache/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/billComponent/BillListComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/billComponent/BillListComponent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sample-app/src/components/itemComponent/UpdateItemComponent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../sample-app/src/components/itemComponent/UpdateItemComponent.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,11 +122,24 @@
       <workItem from="1619493153574" duration="12950000" />
       <workItem from="1619578922620" duration="17070000" />
       <workItem from="1619667965575" duration="14332000" />
-      <workItem from="1619751356338" duration="5164000" />
+      <workItem from="1619751356338" duration="8342000" />
+      <workItem from="1620011444174" duration="541000" />
+      <workItem from="1620012127461" duration="1012000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/ItemController.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,4 +1,5 @@
-package com.adore96.ReactBackEnd.mapping;/*
+package com.adore96.ReactBackEnd.mapping;
+/*
 kasun_k 
 Project ReactBackEnd
 On 4/19/2021
@@ -28,6 +29,8 @@ public class SupplierEntity {
     private String item1;
     private String item2;
     private String item3;
+
+    private String stockidfk;
 
 
 }
