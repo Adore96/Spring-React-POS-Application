@@ -28,4 +28,8 @@ public class UserService {
         newuser.setTelephone(userEntity.getTelephone());
         return newuser;
     }
+
+    public void getBillList() {
+
+    }
 }

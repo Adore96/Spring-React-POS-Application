@@ -5,13 +5,10 @@ Project ReactBackEnd
 On 4/20/2021
 */
 
-import com.adore96.ReactBackEnd.mapping.StockEntity;
-import com.adore96.ReactBackEnd.mapping.SupplierEntity;
+import com.adore96.ReactBackEnd.mapping.ItemEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
-
 @Repository
-public interface StockRepository extends JpaRepository<StockEntity, Integer> {
+public interface ItemRepository extends JpaRepository<ItemEntity, Integer> {
 }

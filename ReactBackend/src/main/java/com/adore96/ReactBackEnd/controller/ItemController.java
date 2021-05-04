@@ -5,11 +5,9 @@ Project ReactBackEnd
 On 4/20/2021
 */
 
-import com.adore96.ReactBackEnd.mapping.StockEntity;
-import com.adore96.ReactBackEnd.mapping.SupplierEntity;
-import com.adore96.ReactBackEnd.repository.StockRepository;
-import com.adore96.ReactBackEnd.repository.SupplierRepository;
-import com.adore96.ReactBackEnd.util.TimeStampGenerator;
+import com.adore96.ReactBackEnd.mapping.ItemEntity;
+import com.adore96.ReactBackEnd.repository.ItemRepository;
+import com.adore96.ReactBackEnd.service.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,31 +22,31 @@ import java.util.Map;
 public class ItemController {
 
     @Autowired
-    StockRepository stockRepository;
+    ItemRepository itemRepository;
 
     @Autowired
-    SupplierRepository supplierRepository;
+    StockService stockService;
 
     //list of stocks
     @RequestMapping("/items")
-    public List<StockEntity> getStocks() {
+    public List<ItemEntity> getStocks() {
         System.out.println("ListStock method");
-        return stockRepository.findAll();
+        return itemRepository.findAll();
     }
 
     //add stock
     @PostMapping("/additem")
-    public StockEntity addstock(@RequestBody StockEntity stockEntity) {
+    public ItemEntity addstock(@RequestBody ItemEntity itemEntity) {
         System.out.println("AddStock Method");
-        stockRepository.save(stockEntity);
-        return stockEntity;
+        itemRepository.save(stockService.saveStock(itemEntity));
+        return itemEntity;
     }
 
     //delete stock by id
     @RequestMapping("/deleteitem/{id}")
     public ResponseEntity<Map<String, Boolean>> deleteStockbyId(@PathVariable Integer id) {
-        StockEntity stockEntity = stockRepository.findById(id).orElse(null);
-        stockRepository.delete(stockEntity);
+        ItemEntity itemEntity = itemRepository.findById(id).orElse(null);
+        itemRepository.delete(itemEntity);
         Map<String, Boolean> response = new HashMap<>();
         response.put("deleted", Boolean.TRUE);
         return ResponseEntity.ok(response);
@@ -56,24 +54,24 @@ public class ItemController {
 
     //update stock rest api
     @PostMapping("/updateitem/{id}")
-    public StockEntity updatestock(@PathVariable Integer id, @RequestBody StockEntity newStockEntity) {
-        StockEntity stockEntity = stockRepository.findById(id).orElse(null);
+    public ItemEntity updatestock(@PathVariable Integer id, @RequestBody ItemEntity newItemEntity) {
+        ItemEntity itemEntity = itemRepository.findById(id).orElse(null);
 
-        stockEntity.setName(newStockEntity.getName());
-        stockEntity.setItemcode(newStockEntity.getItemcode());
-        stockEntity.setAmountremaining(newStockEntity.getAmountremaining());
-        stockEntity.setUnitprice(newStockEntity.getUnitprice());
-        stockEntity.setSuppliers(newStockEntity.getSuppliers());
+        itemEntity.setName(newItemEntity.getName());
+        itemEntity.setItemcode(newItemEntity.getItemcode());
+        itemEntity.setAmountremaining(newItemEntity.getAmountremaining());
+        itemEntity.setUnitprice(newItemEntity.getUnitprice());
+        itemEntity.setSuppliers(newItemEntity.getSuppliers());
 
-        StockEntity updatedStockEntity = stockRepository.save(stockEntity);
-        return updatedStockEntity;
+        ItemEntity updatedItemEntity = itemRepository.save(itemEntity);
+        return updatedItemEntity;
     }
 
     @GetMapping("/items/{id}")
-    public StockEntity getStockbyId(@PathVariable Integer id) {
+    public ItemEntity getStockbyId(@PathVariable Integer id) {
         System.out.println("getStockbyId Method Controller");
-        StockEntity stockEntity = stockRepository.findById(id).orElse(null);
-        return stockEntity;
+        ItemEntity itemEntity = itemRepository.findById(id).orElse(null);
+        return itemEntity;
     }
 
     //get SUppliername from itemId for Itemlist table and update table TODO

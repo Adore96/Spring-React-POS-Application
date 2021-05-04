@@ -26,10 +26,12 @@ public class BillEntity {
     @Id
     @GeneratedValue
     private int id;
-    private String userid_fk;
+
     private int billamount;
     private String createdtime;
     private int payment;
     private String paymentmethod;
+
+    private String useridname;
 
 }

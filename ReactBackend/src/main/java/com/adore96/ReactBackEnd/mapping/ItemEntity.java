@@ -19,15 +19,17 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "stock", schema = "jwt", catalog = "")
-public class StockEntity {
+public class ItemEntity {
 
     @Id
     @GeneratedValue
     private int id;
+
     private String name;
     private String itemcode;
     private String amountremaining;
     private int unitprice;
+    private String createdtime;
 
     @OneToMany(targetEntity = SupplierEntity.class, cascade = CascadeType.ALL)
     @JoinColumn(name = "stockidfk",referencedColumnName = "id")

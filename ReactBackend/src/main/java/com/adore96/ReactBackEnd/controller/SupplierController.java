@@ -5,8 +5,11 @@ Project ReactBackEnd
 On 4/21/2021
 */
 
+import com.adore96.ReactBackEnd.mapping.ItemEntity;
 import com.adore96.ReactBackEnd.mapping.SupplierEntity;
+import com.adore96.ReactBackEnd.repository.ItemRepository;
 import com.adore96.ReactBackEnd.repository.SupplierRepository;
+import com.adore96.ReactBackEnd.service.SupplierService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +26,12 @@ public class SupplierController {
     @Autowired
     SupplierRepository supplierRepository;
 
+    @Autowired
+    ItemRepository itemRepository;
+
+    @Autowired
+    SupplierService supplierService;
+
     //list of suppliers
     @RequestMapping("/suppliers")
     public List<SupplierEntity> getSuppliers() {
@@ -34,7 +43,7 @@ public class SupplierController {
     @PostMapping("/addsupplier")
     public SupplierEntity addEmployee(@RequestBody SupplierEntity supplierEntity) {
         System.out.println("ListSupplier Method");
-        supplierRepository.save(supplierEntity);
+        supplierRepository.save(supplierService.saveSupplier(supplierEntity));
         return supplierEntity;
     }
 
@@ -68,6 +77,12 @@ public class SupplierController {
         System.out.println("Delete Method Controller");
         SupplierEntity supplierEntity = supplierRepository.findById(id).orElse(null);
         return supplierEntity;
+    }
+
+    @GetMapping("/itemlist")
+    public List<ItemEntity> getItemsList() {
+        System.out.println("List Items Method for adding Suppliers Controller");
+        return itemRepository.findAll();
     }
 }
 

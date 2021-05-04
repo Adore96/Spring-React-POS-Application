@@ -41,31 +41,31 @@ class AddUserComponent extends Component {
         this.setState({telephone: event.target.value});
     }
 
-    handleValidation(){
+    handleValidation() {
         let fields = this.state.fields;
         let errors = {};
         let formIsValid = true;
-        
+
         //Name
-        if(!fields["name"]){
+        if (!fields["name"]) {
             formIsValid = false;
             errors["name"] = "Cannot be empty";
         }
 
-        if(typeof fields["name"] !== "undefined"){
-            if(!fields["name"].match(/^[a-zA-Z]+$/)){
+        if (typeof fields["name"] !== "undefined") {
+            if (!fields["name"].match(/^[a-zA-Z]+$/)) {
                 formIsValid = false;
                 errors["name"] = "Only letters";
             }
         }
 
         //Email
-        if(!fields["email"]){
+        if (!fields["email"]) {
             formIsValid = false;
             errors["email"] = "Cannot be empty";
         }
 
-        if(typeof fields["email"] !== "undefined"){
+        if (typeof fields["email"] !== "undefined") {
             let lastAtPos = fields["email"].lastIndexOf('@');
             let lastDotPos = fields["email"].lastIndexOf('.');
 
@@ -79,18 +79,18 @@ class AddUserComponent extends Component {
         return formIsValid;
     }
 
-    contactSubmit(e){
+    contactSubmit(e) {
         e.preventDefault();
 
-        if(this.handleValidation()){
+        if (this.handleValidation()) {
             alert("Form submitted");
-        }else{
+        } else {
             alert("Form has errors.")
         }
 
     }
 
-    handleChange(field, e){
+    handleChange(field, e) {
         let fields = this.state.fields;
         fields[field] = e.target.value;
         this.setState({fields});
@@ -101,8 +101,12 @@ class AddUserComponent extends Component {
     }
 
     render() {
+        const spaceBottom = {
+            paddingBottom: "50px",
+            paddingTop: "25px"
+        };
         return (
-            <div className="container">
+            <div className="container" style={spaceBottom}>
                 <div className="row">
                     <div className="card col-md-6 offset-md-3">
                         <h3 className="text-center">User Signup Page</h3>

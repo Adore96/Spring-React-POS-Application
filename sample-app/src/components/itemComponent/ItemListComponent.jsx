@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ItemService from "../../services/ItemService";
+import CommonService from "../../services/CommonService";
 
 class ItemListComponent extends Component {
 
@@ -31,7 +32,7 @@ class ItemListComponent extends Component {
 
     componentDidMount() {
         //then refers with a JS Promise
-        ItemService.getItems().then((response) => {
+        CommonService.getAllItems().then((response) => {
             this.setState({
                 items: response.data
             })
@@ -76,7 +77,11 @@ class ItemListComponent extends Component {
                                     <td>{item.name}</td>
                                     <td>{item.amountremaining}</td>
                                     <td>{item.unitprice}</td>
-                                    <td>{item.supplier}</td>
+                                    <select value={item.suppliers} multiple={true} size={3}>
+                                        {item.suppliers.map((data) => (
+                                            <option value={data.id}>{data.name}</option>
+                                        ))}
+                                    </select>
                                     <td>
                                         <button onClick={() => this.updateItem(item.id)}
                                                 className="btn btn-outline-info">Update

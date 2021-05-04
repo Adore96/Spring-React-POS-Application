@@ -10,8 +10,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.*;
-import java.util.Objects;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Getter
 @Setter
@@ -29,8 +31,8 @@ public class SupplierEntity {
     private String item1;
     private String item2;
     private String item3;
+    private String createdtime;
 
-    private String stockidfk;
-
-
+    //returned value from the foreignkey.
+    private String stockidname;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import userService from "../../services/UserService";
+import CommonService from "../../services/CommonService";
 import UserService from "../../services/UserService";
 
 class UserListComponent extends React.Component {
@@ -27,7 +27,7 @@ class UserListComponent extends React.Component {
 
     componentDidMount() {
         //then refers with a JS Promise
-        userService.getUsers().then((response) => {
+        CommonService.getAllUsers().then((response) => {
             this.setState({users: response.data})
         });
     }
@@ -39,7 +39,6 @@ class UserListComponent extends React.Component {
     render() {
         return (
             <div>
-
                 <div className="row">
                     <div className="col-sm-4"></div>
                     <div className="col-sm-6">

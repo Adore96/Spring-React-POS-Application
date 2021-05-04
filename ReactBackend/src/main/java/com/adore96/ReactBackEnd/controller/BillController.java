@@ -8,6 +8,7 @@ On 4/28/2021
 import com.adore96.ReactBackEnd.mapping.BillEntity;
 import com.adore96.ReactBackEnd.repository.BillReposiory;
 import com.adore96.ReactBackEnd.service.BillService;
+import com.adore96.ReactBackEnd.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -27,10 +28,14 @@ public class BillController {
     @Autowired
     BillService billService;
 
+    @Autowired
+    UserService userService;
+
     //list of bills
     @RequestMapping("/bills")
     public List<BillEntity> getBills() {
         System.out.println("ListBills Controller");
+        userService.getBillList();
         return billReposiory.findAll();
     }
 

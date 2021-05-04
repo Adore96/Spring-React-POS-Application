@@ -18,6 +18,7 @@ import AddSupplierComponent from "./components/supplierComponent/AddSupplierComp
 import BillListComponent from "./components/billComponent/BillListComponent";
 import ViewSingleBillComponent from "./components/billComponent/ViewSingleBillComponent";
 import UpdateBillComponent from "./components/billComponent/UpdateBillComponent";
+import AddBillComponent from "./components/billComponent/AddBillComponent";
 
 
 function App() {
@@ -52,7 +53,7 @@ function App() {
 
                         {/*Bills*/}
                         <Route path="/bills" component={BillListComponent}/>
-                        <Route path="/add-supplier" component={AddSupplierComponent}/>
+                        <Route path="/add-bill" component={AddBillComponent}/>
                         <Route path="/view-bill/:id" component={ViewSingleBillComponent}/>
                         <Route path="/update-bill/:id" component={UpdateBillComponent}/>
 

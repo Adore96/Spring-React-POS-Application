@@ -36,6 +36,6 @@ public class UserEntity {
     private String timestamp;
 
     @OneToMany(targetEntity = BillEntity.class, cascade = CascadeType.ALL)
-    @JoinColumn(name = "userid_fk", referencedColumnName = "id")
+    @JoinColumn(name = "useridfk", referencedColumnName = "id")
     private List<BillEntity> bills;
 }

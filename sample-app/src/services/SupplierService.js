@@ -1,15 +1,11 @@
 import axios from "axios";
 
-const SUPPLIERS_LIST_API = 'http://localhost:8090/api/v1/suppliers';
 const ADDSUPPLIER_REST_API = 'http://localhost:8090/api/v1/addsupplier';
 const UPDATE_SUPPLIER_REST_API = 'http://localhost:8090/api/v1/updatesupplier';
 const DELETE_SUPPLIER_REST_API = 'http://localhost:8090/api/v1/deletesupplier';
 const GET_SUPPLIER_REST_API = 'http://localhost:8090/api/v1/suppliers/';
 
 class SupplierService {
-    getSuppliers() {
-        return axios.get(SUPPLIERS_LIST_API);
-    }
 
     addSupplier(supplier) {
         return axios.post(ADDSUPPLIER_REST_API, supplier);

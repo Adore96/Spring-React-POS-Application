@@ -19,23 +19,21 @@ class HeaderComponent extends Component {
     addSupplier = () => {
         this.props.history.push('/add-supplier');
     }
-
+    addBill = () => {
+        this.props.history.push('/add-bill');
+    }
     Users = () => {
         this.props.history.push('/users');
     }
-
     login = () => {
         this.props.history.push('/login');
     }
-
     suppliers = () => {
         this.props.history.push('/suppliers');
     }
-
     bills = () => {
         this.props.history.push('/bills');
     }
-
     items = () => {
         this.props.history.push('/items');
     }
@@ -60,7 +58,7 @@ class HeaderComponent extends Component {
 
                 <ul className="navbar-nav">
                     <li className="nav-item">
-                        <a className="nav-link" onClick={this.addUser}>Add User</a>
+                        <a className="nav-link" onClick={this.addBill}>Add Bill</a>
                     </li>
                 </ul>
             </nav>

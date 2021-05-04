@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import BillService from "../../services/BillService";
+import CommonService from "../../services/CommonService";
 
 class BillListComponent extends Component {
 
@@ -8,6 +9,10 @@ class BillListComponent extends Component {
         this.state = {
             bills: [],
         }
+    }
+
+    addBill = () => {
+        this.props.history.push('/add-bill');
     }
 
     updateBill = (id) => {
@@ -27,7 +32,7 @@ class BillListComponent extends Component {
 
     componentDidMount() {
         //then refers with a JS Promise
-        BillService.getBills().then((response) => {
+        CommonService.getAllBills().then((response) => {
             this.setState({
                 bills: response.data
             })
@@ -38,12 +43,15 @@ class BillListComponent extends Component {
         return (
             <div>
                 <div className="row">
-                    <div className="col-sm-5"></div>
+                    <div className="col-sm-4"></div>
                     <div className="col-sm-6">
                         <h1 className="text-left" style={{marginTop: "10px"}}>Bill List</h1>
                     </div>
-                    <div className="col-sm-1">
-
+                    <div className="col-sm-2">
+                        <button style={{marginTop: "25px"}}
+                                onClick={() => this.addBill()}
+                                className="btn btn-primary">Add Bill
+                        </button>
                     </div>
                 </div>
                 <br/>
@@ -67,7 +75,7 @@ class BillListComponent extends Component {
                             bill =>
                                 <tr key={bill.id}>
                                     <td>{bill.id}</td>
-                                    <td>{bill.userid_fk}</td>
+                                    <td>{bill.useridname}</td>
                                     <td>{bill.billamount}</td>
                                     <td>{bill.payment}</td>
                                     <td>{bill.paymentmethod}</td>
