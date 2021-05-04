@@ -18,6 +18,7 @@ class AddBillComponent extends Component {
             item3: '',
             item4: '',
             bill: '',
+            users: [],
         }
     }
 
@@ -26,11 +27,14 @@ class AddBillComponent extends Component {
         CommonService.getAllItems().then((response) => {
             this.setState({items: response.data})
         });
+        CommonService.getAllUsers().then((response) => {
+            this.setState({users: response.data})
+        });
     }
 
     saveBill = (event) => {
         event.preventDefault();
-        this.StringifyItems(this.state.item1, this.state.item2, this.state.item3, this.state.item4)
+        this.StringifyItems(this.state.item1, this.state.item2, this.state.item3, this.state.item4);
         console.log(this.state.Stringitems);
         let bill = {
             useridname: this.state.useridname,
@@ -94,10 +98,14 @@ class AddBillComponent extends Component {
                         <div className="card-body">
                             <form action="signup">
                                 <div className="form-group">
-                                    <label>User Name </label>
-                                    <input type="text" placeholder="User Name" name="name"
-                                           className="form-control"
-                                           value={this.state.useridname} onChange={this.changeUseridnameHandler}/>
+                                    <label style={{marginRight: "10px"}}>User Name </label>
+                                    <select value={this.state.useridname} onChange={this.changeUseridnameHandler}>
+                                        <option value={" "}>Select a user</option>
+                                        {this.state.users.map((data) => (
+                                            <option value={data.id}>{data.username}</option>
+                                        ))}
+                                        <option value={"other"}>Other</option>
+                                    </select>
                                 </div>
 
                                 <div className="form-group">
@@ -154,14 +162,7 @@ class AddBillComponent extends Component {
                                         ))}
                                     </select>
                                 </div>
-                                <div className="form-group">
-                                    <label>Items</label><br/>
-                                    <select value={this.state.bill} onChange={this.changeItemsHandler}>
-                                        {this.state.bills.map((data) => (
-                                            <option value={data.id}>{data.name}</option>
-                                        ))}
-                                    </select>
-                                </div>
+
                                 <button className="Btn btn-success" onClick={this.saveBill}>Save</button>
                                 <button className="Btn btn-danger" onClick={this.cancel.bind(this)}
                                         style={{marginLeft: "10px"}}>Cancel
