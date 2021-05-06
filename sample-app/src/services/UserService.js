@@ -1,9 +1,9 @@
 import axios from "axios";
 
 
-const ADDUSER_REST_API = 'http://localhost:8090/api/v1/adduser';
-const UPDATE_USER_REST_API = 'http://localhost:8090/api/v1/updateuser';
-const DELETE_USER_REST_API = 'http://localhost:8090/api/v1/deleteuser';
+const ADDUSER_REST_API = 'http://localhost:8090/api/v1/add-user';
+const UPDATE_USER_REST_API = 'http://localhost:8090/api/v1/update-user';
+const DELETE_USER_REST_API = 'http://localhost:8090/api/v1/delete-user';
 const GET_USER_REST_API = 'http://localhost:8090/api/v1/users/';
 
 class UserService {

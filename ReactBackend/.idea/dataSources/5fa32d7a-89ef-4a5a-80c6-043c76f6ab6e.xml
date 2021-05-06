@@ -1215,7 +1215,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
     </user>
     <table id="338" parent="4" name="bill"/>
     <table id="339" parent="4" name="hibernate_sequence"/>
-    <table id="340" parent="4" name="stock"/>
+    <table id="340" parent="4" name="item"/>
     <table id="341" parent="4" name="supplier"/>
     <table id="342" parent="4" name="user"/>
     <column id="343" parent="338" name="id">
@@ -1224,12 +1224,12 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="344" parent="338" name="billamount">
+    <column id="344" parent="338" name="bill_amount">
       <Position>2</Position>
       <DataType>int(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="345" parent="338" name="createdtime">
+    <column id="345" parent="338" name="created_time">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1239,119 +1239,120 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="347" parent="338" name="paymentmethod">
+    <column id="347" parent="338" name="payment_method">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="348" parent="338" name="useridname">
+    <column id="348" parent="338" name="userid_name">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="349" parent="338" name="useridfk">
+    <column id="349" parent="338" name="items_description">
       <Position>7</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="350" parent="338" name="useridfk">
+      <Position>8</Position>
       <DataType>int(11)|0s</DataType>
     </column>
-    <index id="350" parent="338" name="FK3b1yvk7323qy6i1au5cqhn3qi">
+    <index id="351" parent="338" name="FK3b1yvk7323qy6i1au5cqhn3qi">
       <ColNames>useridfk</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="351" parent="338" name="PRIMARY">
+    <key id="352" parent="338" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="352" parent="338" name="FK3b1yvk7323qy6i1au5cqhn3qi">
+    <foreign-key id="353" parent="338" name="FK3b1yvk7323qy6i1au5cqhn3qi">
       <ColNames>useridfk</ColNames>
       <RefTableName>user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="353" parent="339" name="next_val">
+    <column id="354" parent="339" name="next_val">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
     </column>
-    <column id="354" parent="340" name="id">
+    <column id="355" parent="340" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="355" parent="340" name="name">
+    <column id="356" parent="340" name="name">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="356" parent="340" name="itemcode">
+    <column id="357" parent="340" name="item_code">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="357" parent="340" name="amountremaining">
+    <column id="358" parent="340" name="amount_remaining">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="358" parent="340" name="unitprice">
+    <column id="359" parent="340" name="unit_price">
       <Position>5</Position>
       <DataType>int(50)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="359" parent="340" name="createdtime">
+    <column id="360" parent="340" name="created_time">
       <Position>6</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="360" parent="340" name="PRIMARY">
+    <key id="361" parent="340" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="361" parent="341" name="id">
+    <column id="362" parent="341" name="id">
       <Position>1</Position>
       <DataType>int(50)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="362" parent="341" name="name">
+    <column id="363" parent="341" name="name">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="363" parent="341" name="telephone">
+    <column id="364" parent="341" name="telephone">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="364" parent="341" name="item1">
+    <column id="365" parent="341" name="item1">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="365" parent="341" name="item2">
+    <column id="366" parent="341" name="item2">
       <Position>5</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="366" parent="341" name="item3">
+    <column id="367" parent="341" name="item3">
       <Position>6</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="367" parent="341" name="createdtime">
+    <column id="368" parent="341" name="created_time">
       <Position>7</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="368" parent="341" name="stockidfk">
+    <column id="369" parent="341" name="itemid_fk">
       <Position>8</Position>
       <DataType>int(11)|0s</DataType>
     </column>
-    <column id="369" parent="341" name="stockidname">
-      <Position>9</Position>
-      <DataType>varchar(255)|0s</DataType>
-    </column>
-    <index id="370" parent="341" name="FKdasf2ahqt58v4hbft5u00h4dg">
-      <ColNames>stockidfk</ColNames>
+    <index id="370" parent="341" name="itemid_fk">
+      <ColNames>itemid_fk</ColNames>
       <Type>btree</Type>
     </index>
     <key id="371" parent="341" name="PRIMARY">
@@ -1359,9 +1360,9 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="372" parent="341" name="FKdasf2ahqt58v4hbft5u00h4dg">
-      <ColNames>stockidfk</ColNames>
-      <RefTableName>stock</RefTableName>
+    <foreign-key id="372" parent="341" name="supplier_ibfk_1">
+      <ColNames>itemid_fk</ColNames>
+      <RefTableName>item</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
     <column id="373" parent="342" name="id">
@@ -1385,7 +1386,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <DataType>varchar(200)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="377" parent="342" name="createdtime">
+    <column id="377" parent="342" name="created_time">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>

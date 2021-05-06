@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import CommonService from "../../services/CommonService";
+import BillService from "../../services/BillService";
 
 class AddBillComponent extends Component {
 
@@ -12,7 +13,7 @@ class AddBillComponent extends Component {
             paymentmethod: '',
             bills: [],
             items: [],
-            Stringitems: '',
+            stringitems: '',
             item1: '',
             item2: '',
             item3: '',
@@ -33,25 +34,64 @@ class AddBillComponent extends Component {
     }
 
     saveBill = (event) => {
-        event.preventDefault();
-        this.StringifyItems(this.state.item1, this.state.item2, this.state.item3, this.state.item4);
-        console.log(this.state.Stringitems);
-        let bill = {
-            useridname: this.state.useridname,
-            billamount: this.state.billamount,
-            payment: this.state.createdtime,
-            paymentmethod: this.state.createdtime,
-            itemss: this.state.Stringitems,
-        };
-        console.log(JSON.stringify(bill));
 
-        // BillService.addBill(bill).then(res => {
-        //     this.props.history.push('/bills');
-        // });
+        event.preventDefault();
+
+        this.StringifyItems(this.state.item1, this.state.item2, this.state.item3, this.state.item4).then(r => {
+
+
+            console.log(this.state.stringitems);
+
+            let bill = {
+                useridname: this.state.useridname,
+                billamount: this.state.billamount,
+                payment: this.state.createdtime,
+                paymentmethod: this.state.createdtime,
+                itemss: this.state.stringitems,
+            };
+            console.log(JSON.stringify(bill));
+            BillService.addBill(bill).then(res => {
+                this.props.history.push('/bills');
+            });
+        });
+
+
+
+
     }
 
-    StringifyItems = (item1, item2, item3, item4) => {
-        this.setState({Stringitems: "" + item1 + "," + item2 + "," + item3 + "," + item4});
+    // async saveBill  (event) {
+    //     await this.StringifyItems(this.state.item1, this.state.item2, this.state.item3, this.state.item4);
+    //     console.log(this.state.stringitems);
+    //     let bill = {
+    //         useridname: this.state.useridname,
+    //         billamount: this.state.billamount,
+    //         payment: this.state.createdtime,
+    //         paymentmethod: this.state.createdtime,
+    //         itemss: this.state.stringitems,
+    //     };
+    //     console.log(JSON.stringify(bill));
+    //     // BillService.addBill(bill).then(res => {
+    //     //     this.props.history.push('/bills');
+    //     // });
+    //
+    //     event.preventDefault();
+    // }
+
+    // StringifyItems = (item1, item2, item3, item4) => {
+    //     console.log(item1+"=="+item4);
+    //     this.setState({stringitems: "" + item1 + "," + item2 + "," + item3 + "," + item4});
+    //     // this.setState({stringitems: "STRINGITEMS"});
+    //     console.log(item1+"=="+item4);
+    //     console.log("str "+this.state.stringitems)
+    // }
+
+    async StringifyItems(item1, item2, item3, item4) {
+        console.log(item1 + "==" + item4);
+        await this.setState({stringitems: "" + item1 + "," + item2 + "," + item3 + "," + item4});
+        // this.setState({stringitems: "STRINGITEMS"});
+        console.log(item1 + "==" + item4);
+        console.log("str " + this.state.stringitems)
     }
 
     changeUseridnameHandler = (event) => {
@@ -69,7 +109,7 @@ class AddBillComponent extends Component {
     }
     changeItem1Handler = (event) => {
         this.setState({item1: event.target.value});
-        console.log(event.target.value);
+        console.log(this.state.item1);
     }
     changeItem2Handler = (event) => {
         this.setState({item2: event.target.value});
@@ -120,21 +160,21 @@ class AddBillComponent extends Component {
                                             style={{marginLeft: "10px"}}>
                                         <option value={" "}>Select Item 2</option>
                                         {this.state.items.map((data) => (
-                                            <option value={data.id}>{data.name}</option>
+                                            <option value={data.name}>{data.name}</option>
                                         ))}
                                     </select>
                                     <select value={this.state.item3} onChange={this.changeItem3Handler}
                                             style={{marginLeft: "10px"}}>
                                         <option value={" "}>Select Item 3</option>
                                         {this.state.items.map((data) => (
-                                            <option value={data.id}>{data.name}</option>
+                                            <option value={data.name}>{data.name}</option>
                                         ))}
                                     </select>
                                     <select value={this.state.item4} onChange={this.changeItem4Handler}
                                             style={{marginLeft: "10px"}}>
                                         <option value={" "}>Select Item 4</option>
                                         {this.state.items.map((data) => (
-                                            <option value={data.id}>{data.name}</option>
+                                            <option value={data.name}>{data.name}</option>
                                         ))}
                                     </select>
                                 </div>

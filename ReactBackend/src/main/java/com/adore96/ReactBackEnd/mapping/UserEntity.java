@@ -2,7 +2,7 @@ package com.adore96.ReactBackEnd.mapping;
 /*
 kasun_k 
 Project ReactBackEnd
-On 4/27/2021
+On 5/5/2021
 */
 
 import lombok.AllArgsConstructor;
@@ -11,31 +11,56 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
 import java.util.List;
 
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Entity
-@Table(name = "user", schema = "jwt", catalog = "")
+@Table(name = "user")
 public class UserEntity {
 
     @Id
-    @GeneratedValue
+    @Column(name = "id")
     private int id;
+
+    @Basic
+    @Column(name = "username")
     private String username;
+
+    @Basic
+    @Column(name = "email")
     private String email;
+
+    @Basic
+    @Column(name = "password")
     private String password;
-    private String createdtime;
+
+    @Basic
+    @Column(name = "created_time")
+    private String createdTime;
+
+    @Basic
+    @Column(name = "fname")
     private String fname;
+
+    @Basic
+    @Column(name = "lname")
     private String lname;
+
+    @Basic
+    @Column(name = "designation")
     private Integer designation;
+
+    @Basic
+    @Column(name = "telephone")
     private Integer telephone;
+
+    @Basic
+    @Column(name = "timestamp")
     private String timestamp;
 
-    @OneToMany(targetEntity = BillEntity.class, cascade = CascadeType.ALL)
-    @JoinColumn(name = "useridfk", referencedColumnName = "id")
-    private List<BillEntity> bills;
+    @OneToMany(mappedBy = "userByUseridfk")
+    private List<BillEntity> billsById;
 }

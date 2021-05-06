@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const ADD_ITEM_REST_API = 'http://localhost:8090/api/v1/additem';
-const UPDATE_ITEM_REST_API = 'http://localhost:8090/api/v1/updateitem';
-const DELETE_ITEM_REST_API = 'http://localhost:8090/api/v1/deleteitem';
+const ADD_ITEM_REST_API = 'http://localhost:8090/api/v1/add-item';
+const UPDATE_ITEM_REST_API = 'http://localhost:8090/api/v1/update-item';
+const DELETE_ITEM_REST_API = 'http://localhost:8090/api/v1/delete-item';
 const GET_ITEM_REST_API = 'http://localhost:8090/api/v1/items/';
-const GET_ITEM_SUPPLIER_REST_API = 'http://localhost:8090/api/v1/itemsupplier';
+const GET_ITEM_SUPPLIER_REST_API = 'http://localhost:8090/api/v1/item-supplier';
 
 class ItemService {
 

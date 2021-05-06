@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const ADD_BILL_REST_API = 'http://localhost:8090/api/v1/addbill';
-const UPDATE_BILL_REST_API = 'http://localhost:8090/api/v1/updatebill';
-const DELETE_BILL_REST_API = 'http://localhost:8090/api/v1/deletebill';
+const ADD_BILL_REST_API = 'http://localhost:8090/api/v1/add-bill';
+const UPDATE_BILL_REST_API = 'http://localhost:8090/api/v1/update-bill';
+const DELETE_BILL_REST_API = 'http://localhost:8090/api/v1/delete-bill';
 const GET_BILL_REST_API = 'http://localhost:8090/api/v1/bills/';
 
 class BillService {

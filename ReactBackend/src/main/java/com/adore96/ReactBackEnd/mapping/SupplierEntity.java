@@ -1,8 +1,7 @@
-package com.adore96.ReactBackEnd.mapping;
-/*
+package com.adore96.ReactBackEnd.mapping;/*
 kasun_k 
 Project ReactBackEnd
-On 4/19/2021
+On 5/5/2021
 */
 
 import lombok.AllArgsConstructor;
@@ -10,29 +9,46 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "supplier", schema = "jwt", catalog = "")
 public class SupplierEntity {
 
     @Id
-    @GeneratedValue
+    @Column(name = "id")
     private int id;
-    private String name;
-    private String telephone;
-    private String item1;
-    private String item2;
-    private String item3;
-    private String createdtime;
 
-    //returned value from the foreignkey.
-    private String stockidname;
+    @Basic
+    @Column(name = "name")
+    private String name;
+
+    @Basic
+    @Column(name = "telephone")
+    private String telephone;
+
+    @Basic
+    @Column(name = "item1")
+    private String item1;
+
+    @Basic
+    @Column(name = "item2")
+    private String item2;
+
+    @Basic
+    @Column(name = "item3")
+    private String item3;
+
+    @Basic
+    @Column(name = "created_time")
+    private String createdTime;
+
+    @ManyToOne
+    @JoinColumn(name = "itemid_fk", referencedColumnName = "id")
+    private ItemEntity itemByItemidFk;
+
 }

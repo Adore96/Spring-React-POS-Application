@@ -7,7 +7,7 @@ On 4/20/2021
 
 import com.adore96.ReactBackEnd.mapping.ItemEntity;
 import com.adore96.ReactBackEnd.repository.ItemRepository;
-import com.adore96.ReactBackEnd.service.StockService;
+import com.adore96.ReactBackEnd.service.itemservice.ItemServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -25,7 +25,7 @@ public class ItemController {
     ItemRepository itemRepository;
 
     @Autowired
-    StockService stockService;
+    ItemServiceImpl itemServiceImpl;
 
     //list of stocks
     @RequestMapping("/items")
@@ -35,15 +35,15 @@ public class ItemController {
     }
 
     //add stock
-    @PostMapping("/additem")
+    @PostMapping("/add-item")
     public ItemEntity addstock(@RequestBody ItemEntity itemEntity) {
         System.out.println("AddStock Method");
-        itemRepository.save(stockService.saveStock(itemEntity));
+        itemRepository.save(itemServiceImpl.saveStock(itemEntity));
         return itemEntity;
     }
 
     //delete stock by id
-    @RequestMapping("/deleteitem/{id}")
+    @RequestMapping("/delete-item/{id}")
     public ResponseEntity<Map<String, Boolean>> deleteStockbyId(@PathVariable Integer id) {
         ItemEntity itemEntity = itemRepository.findById(id).orElse(null);
         itemRepository.delete(itemEntity);
@@ -53,15 +53,15 @@ public class ItemController {
     }
 
     //update stock rest api
-    @PostMapping("/updateitem/{id}")
+    @PostMapping("/update-item/{id}")
     public ItemEntity updatestock(@PathVariable Integer id, @RequestBody ItemEntity newItemEntity) {
         ItemEntity itemEntity = itemRepository.findById(id).orElse(null);
 
         itemEntity.setName(newItemEntity.getName());
-        itemEntity.setItemcode(newItemEntity.getItemcode());
-        itemEntity.setAmountremaining(newItemEntity.getAmountremaining());
-        itemEntity.setUnitprice(newItemEntity.getUnitprice());
-        itemEntity.setSuppliers(newItemEntity.getSuppliers());
+        itemEntity.setItemCode(newItemEntity.getItemCode());
+        itemEntity.setAmountRemaining(newItemEntity.getAmountRemaining());
+        itemEntity.setUnitPrice(newItemEntity.getUnitPrice());
+        itemEntity.setSuppliersById(newItemEntity.getSuppliersById());
 
         ItemEntity updatedItemEntity = itemRepository.save(itemEntity);
         return updatedItemEntity;

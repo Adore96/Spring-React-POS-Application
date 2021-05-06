@@ -7,8 +7,8 @@ On 4/28/2021
 
 import com.adore96.ReactBackEnd.mapping.BillEntity;
 import com.adore96.ReactBackEnd.repository.BillReposiory;
-import com.adore96.ReactBackEnd.service.BillService;
-import com.adore96.ReactBackEnd.service.UserService;
+import com.adore96.ReactBackEnd.service.billservice.BillServiceImpl;
+import com.adore96.ReactBackEnd.service.userservice.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -26,29 +26,28 @@ public class BillController {
     BillReposiory billReposiory;
 
     @Autowired
-    BillService billService;
+    BillServiceImpl billServiceImpl;
 
     @Autowired
-    UserService userService;
+    UserServiceImpl userServiceImpl;
 
     //list of bills
     @RequestMapping("/bills")
     public List<BillEntity> getBills() {
         System.out.println("ListBills Controller");
-        userService.getBillList();
         return billReposiory.findAll();
     }
 
     //add bill
-    @PostMapping("/addbill")
+    @PostMapping("/add-bill")
     public BillEntity addbill(@RequestBody BillEntity billEntity) {
         System.out.println("AddBill Controller");
-        billReposiory.save(billService.saveBill(billEntity));
+        billReposiory.save(billServiceImpl.saveBill(billEntity));
         return billEntity;
     }
 
     //delete bill by id
-    @RequestMapping("/deletebill/{id}")
+    @RequestMapping("/delete-bill/{id}")
     public ResponseEntity<Map<String, Boolean>> deleteBillbyId(@PathVariable Integer id) {
         System.out.println("Deletebill Controller");
         BillEntity billEntity = billReposiory.findById(id).orElse(null);
@@ -59,13 +58,13 @@ public class BillController {
     }
 
     //update bill rest api
-    @PostMapping("/updatebill/{id}")
+    @PostMapping("/update-bill/{id}")
     public BillEntity updatebill(@PathVariable Integer id, @RequestBody BillEntity newBillEntity) {
-        System.out.println("updatebill Controller");
+        System.out.println("UpdateBill Controller");
         BillEntity billEntity = billReposiory.findById(id).orElse(null);
 
-        billEntity.setBillamount(newBillEntity.getBillamount());
-        billEntity.setPaymentmethod(newBillEntity.getPaymentmethod());
+        billEntity.setBillAmount(newBillEntity.getBillAmount());
+        billEntity.setPaymentMethod(newBillEntity.getPaymentMethod());
         billEntity.setPayment(newBillEntity.getPayment());
 
         BillEntity updatedBillEntity = billReposiory.save(billEntity);

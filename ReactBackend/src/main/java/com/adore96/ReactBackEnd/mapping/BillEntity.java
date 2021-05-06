@@ -2,36 +2,50 @@ package com.adore96.ReactBackEnd.mapping;
 /*
 kasun_k 
 Project ReactBackEnd
-On 4/28/2021
+On 5/5/2021
 */
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-@Entity
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "bill", schema = "jwt", catalog = "")
+@Getter
+@Setter
+@Entity
+@Table(name = "bill")
 public class BillEntity {
 
     @Id
-    @GeneratedValue
+    @Column(name = "id")
     private int id;
 
-    private int billamount;
-    private String createdtime;
-    private int payment;
-    private String paymentmethod;
+    @Column(name = "bill_amount")
+    private int billAmount;
 
-    private String useridname;
+    @Column(name = "created_time")
+    private String createdTime;
+
+    @Column(name = "payment")
+    private int payment;
+
+    @Column(name = "payment_method")
+    private String paymentMethod;
+
+    @Column(name = "userid_name")
+    private String useridName;
+
+    @Column(name = "items_description")
+    private String itemsDescription;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "useridfk", referencedColumnName = "id")
+    @JsonIgnore
+    private UserEntity userByUseridfk;
 
 }

@@ -2,7 +2,7 @@ package com.adore96.ReactBackEnd.mapping;
 /*
 kasun_k 
 Project ReactBackEnd
-On 4/20/2021
+On 5/5/2021
 */
 
 import lombok.AllArgsConstructor;
@@ -11,27 +11,40 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Collection;
 
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 @Entity
-@Table(name = "stock", schema = "jwt", catalog = "")
+@Table(name = "item")
 public class ItemEntity {
 
     @Id
-    @GeneratedValue
+    @Column(name = "id")
     private int id;
 
+    @Basic
+    @Column(name = "name")
     private String name;
-    private String itemcode;
-    private String amountremaining;
-    private int unitprice;
-    private String createdtime;
 
-    @OneToMany(targetEntity = SupplierEntity.class, cascade = CascadeType.ALL)
-    @JoinColumn(name = "stockidfk",referencedColumnName = "id")
-    private List<SupplierEntity> suppliers;
+    @Basic
+    @Column(name = "item_code")
+    private String itemCode;
+
+    @Basic
+    @Column(name = "amount_remaining")
+    private String amountRemaining;
+
+    @Basic
+    @Column(name = "unit_price")
+    private int unitPrice;
+
+    @Basic
+    @Column(name = "created_time")
+    private String createdTime;
+
+    @OneToMany(mappedBy = "itemByItemidFk")
+    private Collection<SupplierEntity> suppliersById;
 }

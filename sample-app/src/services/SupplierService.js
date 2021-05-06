@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const ADDSUPPLIER_REST_API = 'http://localhost:8090/api/v1/addsupplier';
-const UPDATE_SUPPLIER_REST_API = 'http://localhost:8090/api/v1/updatesupplier';
-const DELETE_SUPPLIER_REST_API = 'http://localhost:8090/api/v1/deletesupplier';
+const ADDSUPPLIER_REST_API = 'http://localhost:8090/api/v1/add-supplier';
+const UPDATE_SUPPLIER_REST_API = 'http://localhost:8090/api/v1/update-supplier';
+const DELETE_SUPPLIER_REST_API = 'http://localhost:8090/api/v1/delete-supplier';
 const GET_SUPPLIER_REST_API = 'http://localhost:8090/api/v1/suppliers/';
 
 class SupplierService {
