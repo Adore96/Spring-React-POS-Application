@@ -7,10 +7,7 @@ On 4/28/2021
 
 import com.adore96.ReactBackEnd.mapping.BillEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 @Repository
 public interface BillReposiory extends JpaRepository<BillEntity, Integer> {
