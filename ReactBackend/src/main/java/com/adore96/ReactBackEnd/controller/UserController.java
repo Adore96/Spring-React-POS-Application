@@ -7,6 +7,7 @@ On 3/25/2021
 
 import com.adore96.ReactBackEnd.mapping.UserEntity;
 import com.adore96.ReactBackEnd.repository.UserRepository;
+import com.adore96.ReactBackEnd.service.userservice.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +24,9 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
+    @Autowired
+    UserServiceImpl userServiceImpl;
+
     //list of users
     @RequestMapping("/users")
     public List<UserEntity> getUsers() {
@@ -31,15 +35,15 @@ public class UserController {
     }
 
     //add user
-    @PostMapping("/adduser")
+    @PostMapping("/add-user")
     public UserEntity addEmployee(@RequestBody UserEntity userEntity) {
-        System.out.println("ListUser Method");
-        userRepository.save(userEntity);
+        System.out.println("Add Uer Method");
+        userRepository.save(userServiceImpl.saveUser(userEntity));
         return userEntity;
     }
 
     //delete employee by id
-    @RequestMapping("/deleteuser/{id}")
+    @RequestMapping("/delete-user/{id}")
     public ResponseEntity<Map<String, Boolean>> deleteUserbyId(@PathVariable Integer id) {
         UserEntity userEntity = userRepository.findById(id).orElse(null);
         userRepository.delete(userEntity);
@@ -49,7 +53,7 @@ public class UserController {
     }
 
     //update user rest api
-    @PostMapping("/updateuser/{id}")
+    @PostMapping("/update-user/{id}")
     public UserEntity updateuser(@PathVariable Integer id, @RequestBody UserEntity newUserEntity) {
         UserEntity userEntity = userRepository.findById(id).orElse(null);
 

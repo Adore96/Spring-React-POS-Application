@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ItemService from "../../services/ItemService";
 import SupplierService from "../../services/SupplierService";
+import CommonService from "../../services/CommonService";
 
 class AddItemComponent extends Component {
 
@@ -35,7 +36,7 @@ class AddItemComponent extends Component {
 
     componentDidMount() {
         //then refers with a JS Promise
-        SupplierService.getSuppliers().then((res) => {
+        CommonService.getAllSuppliers().then((res) => {
                 this.setState({
                     suppliers: res.data
                 })
@@ -55,6 +56,7 @@ class AddItemComponent extends Component {
     }
     changeSupplierHandler = (event) => {
         this.setState({supplier: event.target.value});
+        console.log(this.state.supplier);
     }
     changeAmountremainingHandler = (event) => {
         this.setState({amountremaining: event.target.value});
@@ -63,50 +65,14 @@ class AddItemComponent extends Component {
         this.setState({unitprice: event.target.value});
     }
 
-    handleValidation() {
-        let fields = this.state.fields;
-        let errors = {};
-        let formIsValid = true;
-
-        //Name
-        if (!fields["name"]) {
-            formIsValid = false;
-            errors["name"] = "Cannot be empty";
-        }
-
-        if (typeof fields["name"] !== "undefined") {
-            if (!fields["name"].match(/^[a-zA-Z]+$/)) {
-                formIsValid = false;
-                errors["name"] = "Only letters";
-            }
-        }
-
-        this.setState({errors: errors});
-        return formIsValid;
-    }
-
-    contactSubmit(e) {
-        e.preventDefault();
-        if (this.handleValidation()) {
-            alert("Form submitted");
-        } else {
-            alert("Form has errors.")
-        }
-    }
-
-    handleChange(field, e) {
-        let fields = this.state.fields;
-        fields[field] = e.target.value;
-        this.setState({fields});
-    }
-
     cancel() {
         this.props.history.push('/items');
     }
 
     render() {
         const spaceBottom = {
-            paddingBottom: "50px"
+            paddingBottom: "50px",
+            paddingTop: "25px"
         };
         return (
             <div className="container" style={spaceBottom}>

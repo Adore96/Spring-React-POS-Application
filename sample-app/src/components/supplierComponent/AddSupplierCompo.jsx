@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import SupplierService from "../../services/SupplierService";
+import CommonService from "../../services/CommonService";
 
 class AddSupplierComponent extends Component {
 
@@ -11,7 +12,16 @@ class AddSupplierComponent extends Component {
             item1: '',
             item2: '',
             item3: '',
+            items: [],
+            item: ''
         }
+    }
+
+    componentDidMount() {
+        //then refers with a JS Promise
+        CommonService.getAllItems().then((response) => {
+            this.setState({items: response.data})
+        });
     }
 
     saveSupplier = (event) => {
@@ -45,38 +55,9 @@ class AddSupplierComponent extends Component {
     changeItem3handler = (event) => {
         this.setState({item3: event.target.value});
     }
-
-    handleValidation() {
-        let fields = this.state.fields;
-        let errors = {};
-        let formIsValid = true;
-
-        //Name
-        if (!fields["name"]) {
-            formIsValid = false;
-            errors["name"] = "Cannot be empty";
-        }
-
-        if (typeof fields["name"] !== "undefined") {
-            if (!fields["name"].match(/^[a-zA-Z]+$/)) {
-                formIsValid = false;
-                errors["name"] = "Only letters";
-            }
-        }
-
-        this.setState({errors: errors});
-        return formIsValid;
-    }
-
-    contactSubmit(e) {
-        e.preventDefault();
-
-        if (this.handleValidation()) {
-            alert("Form submitted");
-        } else {
-            alert("Form has errors.")
-        }
-
+    changeItemsHandler = (event) => {
+        this.setState({item: event.target.value});
+        console.log(this.state.item);
     }
 
     handleChange(field, e) {
@@ -90,8 +71,12 @@ class AddSupplierComponent extends Component {
     }
 
     render() {
+        const spaceBottom = {
+            paddingBottom: "50px",
+            paddingTop: "25px"
+        };
         return (
-            <div className="container">
+            <div className="container" style={spaceBottom}>
                 <div className="row">
                     <div className="card col-md-6 offset-md-3">
                         <h3 className="text-center">Supplier Registration Page</h3>
@@ -126,6 +111,14 @@ class AddSupplierComponent extends Component {
                                     <input type="text" placeholder="Item 03" name="item3"
                                            className="form-control"
                                            value={this.state.item3} onChange={this.changeItem3handler}/>
+                                </div>
+                                <div className="form-group">
+                                    <label>Items</label><br/>
+                                    <select value={this.state.item} onChange={this.changeItemsHandler}>
+                                        {this.state.items.map((data) => (
+                                            <option value={data.id}>{data.name}</option>
+                                        ))}
+                                    </select>
                                 </div>
                                 <button className="Btn btn-success" onClick={this.saveSupplier}>Save</button>
                                 <button className="Btn btn-danger" onClick={this.cancel.bind(this)}

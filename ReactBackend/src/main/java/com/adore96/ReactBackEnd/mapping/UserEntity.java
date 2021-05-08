@@ -1,11 +1,12 @@
-package com.adore96.ReactBackEnd.mapping;/*
+package com.adore96.ReactBackEnd.mapping;
+/*
 kasun_k 
 Project ReactBackEnd
-On 4/27/2021
+On 5/6/2021
 */
 
 import javax.persistence.*;
-import java.sql.Timestamp;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -15,12 +16,13 @@ public class UserEntity {
     private String username;
     private String email;
     private String password;
-    private String createdtime;
+    private String createdTime;
     private String fname;
     private String lname;
     private Integer designation;
     private Integer telephone;
-    private Timestamp timestamp;
+    private String timestamp;
+    private Collection<BillEntity> billsById;
 
     @Id
     @Column(name = "id")
@@ -63,13 +65,13 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "createdtime")
-    public String getCreatedtime() {
-        return createdtime;
+    @Column(name = "created_time")
+    public String getCreatedTime() {
+        return createdTime;
     }
 
-    public void setCreatedtime(String createdtime) {
-        this.createdtime = createdtime;
+    public void setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
     }
 
     @Basic
@@ -114,11 +116,11 @@ public class UserEntity {
 
     @Basic
     @Column(name = "timestamp")
-    public Timestamp getTimestamp() {
+    public String getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(Timestamp timestamp) {
+    public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
 
@@ -127,11 +129,20 @@ public class UserEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         UserEntity that = (UserEntity) o;
-        return id == that.id && Objects.equals(username, that.username) && Objects.equals(email, that.email) && Objects.equals(password, that.password) && Objects.equals(createdtime, that.createdtime) && Objects.equals(fname, that.fname) && Objects.equals(lname, that.lname) && Objects.equals(designation, that.designation) && Objects.equals(telephone, that.telephone) && Objects.equals(timestamp, that.timestamp);
+        return id == that.id && Objects.equals(username, that.username) && Objects.equals(email, that.email) && Objects.equals(password, that.password) && Objects.equals(createdTime, that.createdTime) && Objects.equals(fname, that.fname) && Objects.equals(lname, that.lname) && Objects.equals(designation, that.designation) && Objects.equals(telephone, that.telephone) && Objects.equals(timestamp, that.timestamp);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, username, email, password, createdtime, fname, lname, designation, telephone, timestamp);
+        return Objects.hash(id, username, email, password, createdTime, fname, lname, designation, telephone, timestamp);
+    }
+
+    @OneToMany(mappedBy = "userByUseridfk")
+    public Collection<BillEntity> getBillsById() {
+        return billsById;
+    }
+
+    public void setBillsById(Collection<BillEntity> billsById) {
+        this.billsById = billsById;
     }
 }

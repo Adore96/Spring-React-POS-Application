@@ -33,10 +33,17 @@ class UpdateItemComponent extends Component {
     }
 
     setSupplierName(res) {
+        console.log(res.data.suppliers);
         ItemService.getItemSupplier(res.data.supplier).then((response) => {
             this.setState({supplierName: response.data})
         })
     }
+
+// <select value={this.state.supplier} onChange={this.changeSupplierHandler}>
+// {this.state.suppliers.map((data) => (
+//     <option value={data.id}>{data.name}</option>
+// ))}
+// </select>
 
     updateItem = (event) => {
         event.preventDefault();

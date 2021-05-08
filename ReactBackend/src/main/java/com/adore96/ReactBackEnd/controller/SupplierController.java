@@ -5,8 +5,11 @@ Project ReactBackEnd
 On 4/21/2021
 */
 
+import com.adore96.ReactBackEnd.mapping.ItemEntity;
 import com.adore96.ReactBackEnd.mapping.SupplierEntity;
+import com.adore96.ReactBackEnd.repository.ItemRepository;
 import com.adore96.ReactBackEnd.repository.SupplierRepository;
+import com.adore96.ReactBackEnd.service.spplierservice.SupplierServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +26,12 @@ public class SupplierController {
     @Autowired
     SupplierRepository supplierRepository;
 
+    @Autowired
+    ItemRepository itemRepository;
+
+    @Autowired
+    SupplierServiceImpl supplierServiceImpl;
+
     //list of suppliers
     @RequestMapping("/suppliers")
     public List<SupplierEntity> getSuppliers() {
@@ -31,15 +40,15 @@ public class SupplierController {
     }
 
     //add supplier
-    @PostMapping("/addsupplier")
+    @PostMapping("/add-supplier")
     public SupplierEntity addEmployee(@RequestBody SupplierEntity supplierEntity) {
         System.out.println("ListSupplier Method");
-        supplierRepository.save(supplierEntity);
+        supplierRepository.save(supplierServiceImpl.saveSupplier(supplierEntity));
         return supplierEntity;
     }
 
     //delete employee by id
-    @RequestMapping("/deletesupplier/{id}")
+    @RequestMapping("/delete-supplier/{id}")
     public ResponseEntity<Map<String, Boolean>> deleteSupplierbyId(@PathVariable Integer id) {
         SupplierEntity supplierEntity = supplierRepository.findById(id).orElse(null);
         supplierRepository.delete(supplierEntity);
@@ -49,7 +58,7 @@ public class SupplierController {
     }
 
     //update supplier rest api
-    @PostMapping("/updatesupplier/{id}")
+    @PostMapping("/update-supplier/{id}")
     public SupplierEntity updatesupplier(@PathVariable Integer id, @RequestBody SupplierEntity newSupplierEntity) {
         SupplierEntity supplierEntity = supplierRepository.findById(id).orElse(null);
 
@@ -68,6 +77,12 @@ public class SupplierController {
         System.out.println("Delete Method Controller");
         SupplierEntity supplierEntity = supplierRepository.findById(id).orElse(null);
         return supplierEntity;
+    }
+
+    @GetMapping("/item-list")
+    public List<ItemEntity> getItemsList() {
+        System.out.println("List Items Method for adding Suppliers Controller");
+        return itemRepository.findAll();
     }
 }
 

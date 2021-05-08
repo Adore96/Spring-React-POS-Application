@@ -15,8 +15,10 @@ import AddItemComponent from "./components/itemComponent/AddItemComponent";
 import UpdateSupplierComponent from "./components/supplierComponent/UpdateSupplierComponent";
 import ViewSupplierComponent from "./components/supplierComponent/ViewSupplierComponent";
 import AddSupplierComponent from "./components/supplierComponent/AddSupplierCompo.jsx";
-import ViewBillListComponent from "./components/billComponent/ViewBillListComponent";
+import BillListComponent from "./components/billComponent/BillListComponent";
 import ViewSingleBillComponent from "./components/billComponent/ViewSingleBillComponent";
+import UpdateBillComponent from "./components/billComponent/UpdateBillComponent";
+import AddBillComponent from "./components/billComponent/AddBillComponent";
 
 
 function App() {
@@ -50,8 +52,10 @@ function App() {
                         <Route path="/view-supplier/:id" component={ViewSupplierComponent}/>
 
                         {/*Bills*/}
-                        <Route path="/bils" component={ViewBillListComponent}/>
-                        <Route path="/view-bill" component={ViewSingleBillComponent}/>
+                        <Route path="/bills" component={BillListComponent}/>
+                        <Route path="/add-bill" component={AddBillComponent}/>
+                        <Route path="/view-bill/:id" component={ViewSingleBillComponent}/>
+                        <Route path="/update-bill/:id" component={UpdateBillComponent}/>
 
                     </Switch>
                 </div>

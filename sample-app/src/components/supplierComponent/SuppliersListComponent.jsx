@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import SupplierService from "../../services/SupplierService";
+import CommonService from "../../services/CommonService";
 
 class SuppliersListComponent extends Component {
 
@@ -30,7 +31,7 @@ class SuppliersListComponent extends Component {
 
     componentDidMount() {
         //then refers with a JS Promise
-        SupplierService.getSuppliers().then((response) => {
+        CommonService.getAllSuppliers().then((response) => {
             this.setState({suppliers: response.data})
         });
     }
@@ -59,9 +60,8 @@ class SuppliersListComponent extends Component {
                     <tr>
                         <th>Name</th>
                         <th>Telephone</th>
-                        <th>Item 01</th>
-                        <th>Item 02</th>
-                        <th>Item 03</th>
+                        <th>Items</th>
+                        <th>Created Date</th>
                         <th>Actions</th>
                     </tr>
                     </thead>
@@ -73,9 +73,8 @@ class SuppliersListComponent extends Component {
                                 <tr key={supplier.id}>
                                     <td>{supplier.name}</td>
                                     <td>{supplier.telephone}</td>
-                                    <td>{supplier.item1}</td>
-                                    <td>{supplier.item2}</td>
-                                    <td>{supplier.item3}</td>
+                                    <td>{supplier.stockidfk}</td>
+                                    <td>{supplier.item}</td>
                                     <td>
                                         <button onClick={() => this.updateSupplier(supplier.id)}
                                                 className="btn btn-outline-info">Update
