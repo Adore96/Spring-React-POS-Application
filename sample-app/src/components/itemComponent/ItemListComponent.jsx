@@ -8,7 +8,7 @@ class ItemListComponent extends Component {
         super(props);
         this.state = {
             items: [],
-            supplierName: ''
+            supplierName: '',
         }
     }
 
@@ -73,12 +73,12 @@ class ItemListComponent extends Component {
                         this.state.items.map(
                             item =>
                                 <tr key={item.id}>
-                                    <td>{item.itemcode}</td>
+                                    <td>{item.itemCode}</td>
                                     <td>{item.name}</td>
-                                    <td>{item.amountremaining}</td>
-                                    <td>{item.unitprice}</td>
-                                    <select value={item.suppliers} multiple={true} size={3}>
-                                        {item.suppliers.map((data) => (
+                                    <td>{item.amountRemaining}</td>
+                                    <td>{item.unitPrice}</td>
+                                    <select value={item.suppliersById} aria-readonly={"true"}>
+                                        {item.suppliersById.map((data) => (
                                             <option value={data.id}>{data.name}</option>
                                         ))}
                                     </select>

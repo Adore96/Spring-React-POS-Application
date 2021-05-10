@@ -37,6 +37,7 @@ class SuppliersListComponent extends Component {
     }
 
     render() {
+
         return (
             <div>
 
@@ -58,6 +59,7 @@ class SuppliersListComponent extends Component {
 
                     <thead>
                     <tr>
+                        <th>Supplier Id</th>
                         <th>Name</th>
                         <th>Telephone</th>
                         <th>Items</th>
@@ -71,6 +73,7 @@ class SuppliersListComponent extends Component {
                         this.state.suppliers.map(
                             supplier =>
                                 <tr key={supplier.id}>
+                                    <td>{supplier.id}</td>
                                     <td>{supplier.name}</td>
                                     <td>{supplier.telephone}</td>
                                     <td>{supplier.stockidfk}</td>

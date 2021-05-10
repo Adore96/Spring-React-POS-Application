@@ -35,7 +35,8 @@ class ViewSupplierComponent extends Component {
     render() {
 
         const spaceBottom = {
-            paddingBottom: "50px"
+            paddingBottom: "50px",
+            paddingTop: "25px"
         };
         return (
             <div className="container" style={spaceBottom}>

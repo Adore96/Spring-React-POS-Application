@@ -8,8 +8,8 @@ class UpdateBillComponent extends Component {
         super(props);
         this.state = {
             id: this.props.match.params.id,
-            userid_fk: '',
-            billamount: '',
+            useridfk: '',
+            billAmount: '',
             createdtime: '',
             payment: '',
             paymentmethod: ''
@@ -22,11 +22,11 @@ class UpdateBillComponent extends Component {
                 let bill = res.data;
                 this.setState({
                     id: this.state.id,
-                    userid_fk: bill.userid_fk,
-                    billamount: bill.billamount,
+                    useridfk: bill.useridfk,
+                    billAmount: bill.billAmount,
                     createdtime: bill.createdtime,
                     payment: bill.payment,
-                    paymentmethod: bill.paymentmethod,
+                    paymentMethod: bill.paymentMethod,
                 })
                 this.setSupplierName(res);
             }
@@ -43,10 +43,10 @@ class UpdateBillComponent extends Component {
         event.preventDefault();
         let bill = {
             id: this.state.id,
-            userid_fk: this.state.userid_fk,
-            billamount: this.state.billamount,
+            useridfk: this.state.useridfk,
+            billAmount: this.state.billAmount,
             payment: this.state.payment,
-            paymentmethod: this.state.paymentmethod
+            paymentMethod: this.state.paymentMethod
         };
         console.log('Bill => ' + JSON.stringify(bill));
 
@@ -56,13 +56,13 @@ class UpdateBillComponent extends Component {
     }
 
     changeBillAmountHandler = (event) => {
-        this.setState({billamount: event.target.value});
+        this.setState({billAmount: event.target.value});
     }
     changePaymentHandler = (event) => {
         this.setState({payment: event.target.value});
     }
     changePaymentMethodHandler = (event) => {
-        this.setState({paymentmethod: event.target.value});
+        this.setState({paymentMethod: event.target.value});
     }
 
     cancel() {
@@ -71,7 +71,8 @@ class UpdateBillComponent extends Component {
 
     render() {
         const LowerBound = {
-            paddingBottom: "70px"
+            paddingBottom: "70px",
+            paddingTop: "20px"
         };
         return (
             <div className="container" style={LowerBound}>
@@ -90,13 +91,13 @@ class UpdateBillComponent extends Component {
                                     <label>User </label>
                                     <input type="text" placeholder="Item Code" name="itemcode"
                                            className="form-control"
-                                           value={this.state.userid_fk} readOnly={true}/>
+                                           value={this.state.useridfk} readOnly={true}/>
                                 </div>
                                 <div className="form-group">
                                     <label>Bill Amount </label>
                                     <input type="text" placeholder="Supplier" name="supplier"
                                            className="form-control"
-                                           value={this.state.billamount} onChange={this.changeBillAmountHandler}/>
+                                           value={this.state.billAmount} onChange={this.changeBillAmountHandler}/>
                                 </div>
                                 <div className="form-group">
                                     <label>Payment </label>
@@ -109,7 +110,7 @@ class UpdateBillComponent extends Component {
                                     <label>Payment Method </label>
                                     <input type="text" placeholder="Unit Price" name="unitprice"
                                            className="form-control"
-                                           value={this.state.paymentmethod} onChange={this.changePaymentMethodHandler}/>
+                                           value={this.state.paymentMethod} onChange={this.changePaymentMethodHandler}/>
                                 </div>
                                 <button className="Btn btn-success" onClick={this.updateBill}>Update</button>
                                 <button className="Btn btn-danger" onClick={this.cancel.bind(this)}

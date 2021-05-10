@@ -75,11 +75,11 @@ class BillListComponent extends Component {
                             bill =>
                                 <tr key={bill.id}>
                                     <td>{bill.id}</td>
-                                    <td>{bill.useridname}</td>
-                                    <td>{bill.billamount}</td>
+                                    <td>{bill.useridfk}</td>
+                                    <td>{bill.billAmount}</td>
                                     <td>{bill.payment}</td>
-                                    <td>{bill.paymentmethod}</td>
-                                    <td>{bill.createdtime}</td>
+                                    <td>{bill.paymentMethod}</td>
+                                    <td>{bill.createdTime}</td>
 
                                     <td>
                                         <button onClick={() => this.updateBill(bill.id)}
@@ -89,7 +89,7 @@ class BillListComponent extends Component {
                                                 className="btn btn-outline-danger">Delete
                                         </button>
                                         <button style={{marginLeft: "10px"}} onClick={() => this.downloadBill(bill.id)}
-                                                className="btn btn-outline-primary">Download
+                                                className="btn btn-outline-primary">View/Download
                                         </button>
                                     </td>
                                 </tr>
