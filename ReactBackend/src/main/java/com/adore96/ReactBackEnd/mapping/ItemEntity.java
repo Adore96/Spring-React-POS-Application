@@ -47,4 +47,63 @@ public class ItemEntity {
 
     @OneToMany(mappedBy = "itemByItemidFk")
     private Collection<SupplierEntity> suppliersById;
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getItemCode() {
+        return itemCode;
+    }
+
+    public void setItemCode(String itemCode) {
+        this.itemCode = itemCode;
+    }
+
+    public String getAmountRemaining() {
+        return amountRemaining;
+    }
+
+    public void setAmountRemaining(String amountRemaining) {
+        this.amountRemaining = amountRemaining;
+    }
+
+    public int getUnitPrice() {
+        return unitPrice;
+    }
+
+    public void setUnitPrice(int unitPrice) {
+        this.unitPrice = unitPrice;
+    }
+
+    public String getCreatedTime() {
+        return createdTime;
+    }
+
+    public void setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
+    }
+
+    public Collection<SupplierEntity> getSuppliersById() {
+        return suppliersById;
+    }
+
+    public void setSuppliersById(Collection<SupplierEntity> suppliersById) {
+        this.suppliersById = suppliersById;
+    }
 }

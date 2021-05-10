@@ -9,7 +9,7 @@ import com.adore96.ReactBackEnd.mapping.ItemEntity;
 import com.adore96.ReactBackEnd.mapping.SupplierEntity;
 import com.adore96.ReactBackEnd.repository.ItemRepository;
 import com.adore96.ReactBackEnd.repository.SupplierRepository;
-import com.adore96.ReactBackEnd.service.spplierservice.SupplierServiceImpl;
+import com.adore96.ReactBackEnd.service.supplierservice.SupplierServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

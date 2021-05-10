@@ -7,6 +7,7 @@ On 4/28/2021
 
 import com.adore96.ReactBackEnd.mapping.BillEntity;
 import com.adore96.ReactBackEnd.repository.BillReposiory;
+import com.adore96.ReactBackEnd.service.billservice.BillService;
 import com.adore96.ReactBackEnd.service.billservice.BillServiceImpl;
 import com.adore96.ReactBackEnd.service.userservice.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,7 @@ public class BillController {
     BillReposiory billReposiory;
 
     @Autowired
-    BillServiceImpl billServiceImpl;
+    BillService billService;
 
     @Autowired
     UserServiceImpl userServiceImpl;
@@ -42,7 +43,7 @@ public class BillController {
     @PostMapping("/add-bill")
     public BillEntity addbill(@RequestBody BillEntity billEntity) {
         System.out.println("AddBill Controller");
-        billReposiory.save(billServiceImpl.saveBill(billEntity));
+        billReposiory.save(billService.saveBill(billEntity));
         return billEntity;
     }
 

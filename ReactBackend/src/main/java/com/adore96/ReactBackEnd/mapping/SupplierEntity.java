@@ -25,27 +25,21 @@ public class SupplierEntity {
     @Column(name = "id")
     private int id;
 
-    @Basic
     @Column(name = "name")
     private String name;
 
-    @Basic
     @Column(name = "telephone")
     private String telephone;
 
-    @Basic
     @Column(name = "item1")
     private String item1;
 
-    @Basic
     @Column(name = "item2")
     private String item2;
 
-    @Basic
     @Column(name = "item3")
     private String item3;
 
-    @Basic
     @Column(name = "created_time")
     private String createdTime;
 
@@ -54,4 +48,69 @@ public class SupplierEntity {
     @JsonIgnore
     private ItemEntity itemByItemidFk;
 
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public String getItem1() {
+        return item1;
+    }
+
+    public void setItem1(String item1) {
+        this.item1 = item1;
+    }
+
+    public String getItem2() {
+        return item2;
+    }
+
+    public void setItem2(String item2) {
+        this.item2 = item2;
+    }
+
+    public String getItem3() {
+        return item3;
+    }
+
+    public void setItem3(String item3) {
+        this.item3 = item3;
+    }
+
+    public String getCreatedTime() {
+        return createdTime;
+    }
+
+    public void setCreatedTime(String createdTime) {
+        this.createdTime = createdTime;
+    }
+
+    public ItemEntity getItemByItemidFk() {
+        return itemByItemidFk;
+    }
+
+    public void setItemByItemidFk(ItemEntity itemByItemidFk) {
+        this.itemByItemidFk = itemByItemidFk;
+    }
 }
