@@ -54,37 +54,7 @@ class AddBillComponent extends Component {
                 this.props.history.push('/bills');
             });
         });
-
-
-
-
     }
-
-    // async saveBill  (event) {
-    //     await this.StringifyItems(this.state.item1, this.state.item2, this.state.item3, this.state.item4);
-    //     console.log(this.state.stringitems);
-    //     let bill = {
-    //         useridname: this.state.useridname,
-    //         billamount: this.state.billamount,
-    //         payment: this.state.createdtime,
-    //         paymentmethod: this.state.createdtime,
-    //         itemss: this.state.stringitems,
-    //     };
-    //     console.log(JSON.stringify(bill));
-    //     // BillService.addBill(bill).then(res => {
-    //     //     this.props.history.push('/bills');
-    //     // });
-    //
-    //     event.preventDefault();
-    // }
-
-    // StringifyItems = (item1, item2, item3, item4) => {
-    //     console.log(item1+"=="+item4);
-    //     this.setState({stringitems: "" + item1 + "," + item2 + "," + item3 + "," + item4});
-    //     // this.setState({stringitems: "STRINGITEMS"});
-    //     console.log(item1+"=="+item4);
-    //     console.log("str "+this.state.stringitems)
-    // }
 
     async StringifyItems(item1, item2, item3, item4) {
         console.log(item1 + "==" + item4);

@@ -18,14 +18,16 @@ class ViewItemComponent extends Component {
                 let item = res.data;
                 this.setState({
                     name: item.name,
-                    itemcode: item.itemcode,
+                    itemCode: item.itemCode,
                     supplier: item.supplier,
-                    amountremaining: item.amountremaining,
-                    unitprice: item.unitprice,
-                })
+                    amountRemaining: item.amountRemaining,
+                    unitPrice: item.unitPrice,
+                });
+                console.log(item.suppliersById);
 
                 ItemService.getItemSupplier(res.data.supplier).then((response) => {
-                    this.setState({supplierName: response.data})
+                    this.setState({supplierName: response.data});
+
                 })
             }
         );
@@ -38,7 +40,8 @@ class ViewItemComponent extends Component {
     render() {
 
         const spaceBottom = {
-            paddingBottom: "50px"
+            paddingBottom: "50px",
+            paddingTop: "25px"
         };
         return (
 
@@ -59,7 +62,7 @@ class ViewItemComponent extends Component {
                                     <label>Item Code</label>
                                     <input type="text" placeholder="Item Code" name="itemCode"
                                            className="form-control"
-                                           value={this.state.itemcode} readOnly={true}/>
+                                           value={this.state.itemCode} readOnly={true}/>
                                 </div>
                                 <div className="form-group">
                                     <label>Supplier</label>
@@ -71,13 +74,13 @@ class ViewItemComponent extends Component {
                                     <label>Amount Remaining </label>
                                     <input type="text" placeholder="Amount Remaining" name="amountRemaining"
                                            className="form-control"
-                                           value={this.state.amountremaining} readOnly={true}/>
+                                           value={this.state.amountRemaining} readOnly={true}/>
                                 </div>
                                 <div className="form-group">
                                     <label>Unit Price</label>
                                     <input type="text" placeholder="Unit Price" name="unitPrice"
                                            className="form-control"
-                                           value={this.state.unitprice} readOnly={true}/>
+                                           value={this.state.unitPrice} readOnly={true}/>
                                 </div>
                                 {/*should insert a dropdown containing the list of suppliers TODO*/}
 

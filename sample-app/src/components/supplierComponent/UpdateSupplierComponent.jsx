@@ -67,8 +67,12 @@ class UpdateSupplierComponent extends Component {
     }
 
     render() {
+        const LowerBound = {
+            paddingBottom: "70px",
+            paddingTop: "20px"
+        };
         return (
-            <div className="container">
+            <div className="container" style={LowerBound}>
                 <div className="row">
                     <div className="card col-md-6 offset-md-3">
                         <h3 className="text-center">Supplier Update Page</h3>

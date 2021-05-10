@@ -1,9 +1,11 @@
-package com.adore96.ReactBackEnd.mapping;/*
+package com.adore96.ReactBackEnd.mapping;
+/*
 kasun_k 
 Project ReactBackEnd
 On 5/5/2021
 */
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -47,8 +49,9 @@ public class SupplierEntity {
     @Column(name = "created_time")
     private String createdTime;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL, optional = false)
     @JoinColumn(name = "itemid_fk", referencedColumnName = "id")
+    @JsonIgnore
     private ItemEntity itemByItemidFk;
 
 }

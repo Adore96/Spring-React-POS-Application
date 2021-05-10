@@ -8,11 +8,12 @@ class UpdateItemComponent extends Component {
         this.state = {
             id: this.props.match.params.id,
             name: '',
-            itemcode: '',
+            itemCode: '',
             supplier: '',
-            amountremaining: '',
-            unitprice: '',
-            supplierName: ''
+            amountRemaining: '',
+            unitPrice: '',
+            supplierName: '',
+            suppliersById:[]
         }
     }
 
@@ -22,10 +23,11 @@ class UpdateItemComponent extends Component {
                 let item = res.data;
                 this.setState({
                     name: item.name,
-                    itemcode: item.itemcode,
+                    itemCode: item.itemCode,
                     supplier: item.supplier,
-                    amountremaining: item.amountremaining,
-                    unitprice: item.unitprice,
+                    amountRemaining: item.amountRemaining,
+                    unitPrice: item.unitPrice,
+                    suppliersById:item.suppliersById,
                 })
                 this.setSupplierName(res);
             }
@@ -49,10 +51,10 @@ class UpdateItemComponent extends Component {
         event.preventDefault();
         let item = {
             name: this.state.name,
-            itemcode: this.state.itemcode,
+            itemCode: this.state.itemCode,
             supplier: this.state.supplier,
-            amountremaining: this.state.amountremaining,
-            unitprice: this.state.unitprice
+            amountRemaining: this.state.amountRemaining,
+            unitPrice: this.state.unitPrice
         };
         console.log('Item => ' + JSON.stringify(item));
 
@@ -65,16 +67,16 @@ class UpdateItemComponent extends Component {
         this.setState({name: event.target.value});
     }
     changeItemCodeHandler = (event) => {
-        this.setState({itemcode: event.target.value});
+        this.setState({itemCode: event.target.value});
     }
     changeSupplierHandler = (event) => {
         this.setState({supplier: event.target.value});
     }
     changeAmountremainingHandler = (event) => {
-        this.setState({amountremaining: event.target.value});
+        this.setState({amountRemaining: event.target.value});
     }
     changeUnitPriceHandler = (event) => {
-        this.setState({unitprice: event.target.value});
+        this.setState({unitPrice: event.target.value});
     }
 
     cancel() {
@@ -82,12 +84,13 @@ class UpdateItemComponent extends Component {
     }
 
     render() {
-        const LowerBound = {
-            paddingBottom: "70px"
+        const spaceBottom = {
+            paddingBottom: "50px",
+            paddingTop: "25px"
         };
 
         return (
-            <div className="container" style={LowerBound}>
+            <div className="container" style={spaceBottom}>
                 <div className="row">
                     <div className="card col-md-6 offset-md-3">
                         <h3 className="text-center">Update Item Page</h3>
@@ -101,28 +104,31 @@ class UpdateItemComponent extends Component {
                                 </div>
                                 <div className="form-group">
                                     <label>Item Code </label>
-                                    <input type="text" placeholder="Item Code" name="itemcode"
+                                    <input type="text" placeholder="Item Code" name="itemCode"
                                            className="form-control"
-                                           value={this.state.itemcode} onChange={this.changeItemCodeHandler}/>
+                                           value={this.state.itemCode} onChange={this.changeItemCodeHandler}/>
                                 </div>
+
                                 <div className="form-group">
-                                    <label>Supplier </label>
-                                    <input type="text" placeholder="Supplier" name="supplier"
-                                           className="form-control"
-                                           value={this.state.supplierName} onChange={this.changeSupplierHandler}/>
+                                    <label style={{marginRight: "12px"}}>Supplier </label>
+                                    <select value={this.state.supplier} aria-readonly={"true"}>
+                                        {this.state.suppliersById.map((data) => (
+                                            <option value={data.id}>{data.name}</option>
+                                        ))}
+                                    </select>
                                 </div>
                                 <div className="form-group">
                                     <label>Amount Remaining </label>
-                                    <input type="text" placeholder="Amount Remaining" name="amountremaining"
+                                    <input type="text" placeholder="Amount Remaining" name="amountRemaining"
                                            className="form-control"
-                                           value={this.state.amountremaining}
+                                           value={this.state.amountRemaining}
                                            onChange={this.changeAmountremainingHandler}/>
                                 </div>
                                 <div className="form-group">
-                                    <label>Unit Price </label>
-                                    <input type="text" placeholder="Unit Price" name="unitprice"
+                                    <label>Unit Price / LKR </label>
+                                    <input type="text" placeholder="Unit Price/LKR" name="unitprice"
                                            className="form-control"
-                                           value={this.state.unitprice} onChange={this.changeUnitPriceHandler}/>
+                                           value={this.state.unitPrice} onChange={this.changeUnitPriceHandler}/>
                                 </div>
                                 <button className="Btn btn-success" onClick={this.updateItem}>Update</button>
                                 <button className="Btn btn-danger" onClick={this.cancel.bind(this)}
