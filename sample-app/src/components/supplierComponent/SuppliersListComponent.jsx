@@ -40,7 +40,6 @@ class SuppliersListComponent extends Component {
 
         return (
             <div>
-
                 <div className="row">
                     <div className="col-sm-4"></div>
                     <div className="col-sm-6">
