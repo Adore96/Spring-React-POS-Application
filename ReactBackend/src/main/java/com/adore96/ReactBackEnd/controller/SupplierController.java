@@ -57,7 +57,7 @@ public class SupplierController {
         return ResponseEntity.ok(response);
     }
 
-    //update supplier rest api
+    //update supplier
     @PostMapping("/update-supplier/{id}")
     public SupplierEntity updatesupplier(@PathVariable Integer id, @RequestBody SupplierEntity newSupplierEntity) {
         SupplierEntity supplierEntity = supplierRepository.findById(id).orElse(null);
