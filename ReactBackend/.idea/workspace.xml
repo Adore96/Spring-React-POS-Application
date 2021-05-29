@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="974d01d3-6973-418e-9f6f-713ad5ff70c2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/SupplierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/SupplierController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,12 +131,25 @@
       <workItem from="1621508136398" duration="154000" />
       <workItem from="1621508314775" duration="1700000" />
       <workItem from="1621510109000" duration="78000" />
-      <workItem from="1622311842485" duration="139000" />
+      <workItem from="1622311842485" duration="288000" />
+      <workItem from="1622312213074" duration="1258000" />
     </task>
+    <task id="LOCAL-00001" summary="Dev Update">
+      <created>1622312041629</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1622312041629</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Dev Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dev Update" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2023" y="36" width="834" height="658" key="#Notifications" timestamp="1621508022826">
@@ -151,10 +160,14 @@
       <screen x="0" y="23" width="1920" height="1007" />
     </state>
     <state x="773" y="217" key="#com.intellij.ide.util.MemberChooser/0.23.1920.1007@0.23.1920.1007" timestamp="1620675242122" />
-    <state x="648" y="269" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1622311916391">
+    <state x="648" y="269" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1622313369237">
       <screen x="0" y="23" width="1920" height="1007" />
     </state>
-    <state x="648" y="269" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1920.1007@0.23.1920.1007" timestamp="1622311916391" />
+    <state x="648" y="269" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1920.1007@0.23.1920.1007" timestamp="1622313369237" />
+    <state x="491" y="120" key="CommitChangelistDialog2" timestamp="1622312041002">
+      <screen x="0" y="23" width="1920" height="1007" />
+    </state>
+    <state x="491" y="120" key="CommitChangelistDialog2/0.23.1920.1007@0.23.1920.1007" timestamp="1622312041002" />
     <state width="1878" height="344" key="GridCell.Tab.0.bottom" timestamp="1620677540509">
       <screen x="0" y="23" width="1920" height="1007" />
     </state>
@@ -219,6 +232,10 @@
       <screen x="1440" y="-44" width="1920" height="1057" />
     </state>
     <state x="1613" y="73" width="1451" height="722" key="SettingsEditor/1440.-44.1920.1057/0.23.1440.827@1440.-44.1920.1057" timestamp="1621510087213" />
+    <state x="560" y="266" key="Vcs.Push.Dialog.v2" timestamp="1622312106841">
+      <screen x="0" y="23" width="1920" height="1007" />
+    </state>
+    <state x="560" y="266" key="Vcs.Push.Dialog.v2/0.23.1920.1007@0.23.1920.1007" timestamp="1622312106841" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
