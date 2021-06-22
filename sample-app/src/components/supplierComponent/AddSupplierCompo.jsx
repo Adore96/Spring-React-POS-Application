@@ -13,7 +13,7 @@ class AddSupplierComponent extends Component {
             item2: '',
             item3: '',
             items: [],
-            item: ''
+            itemByItemidFk: ''
         }
     }
 
@@ -31,7 +31,8 @@ class AddSupplierComponent extends Component {
             telephone: this.state.telephone,
             item1: this.state.item1,
             item2: this.state.item2,
-            item3: this.state.item3
+            item3: this.state.item3,
+            itemByItemidFk: this.state.itemByItemidFk,
         };
         console.log('Supplier => ' + JSON.stringify(supplier));
 
@@ -56,8 +57,8 @@ class AddSupplierComponent extends Component {
         this.setState({item3: event.target.value});
     }
     changeItemsHandler = (event) => {
-        this.setState({item: event.target.value});
-        console.log(this.state.item);
+        this.setState({itemByItemidFk: event.target.value});
+        console.log(this.state.itemByItemidFk);
     }
 
     handleChange(field, e) {
@@ -114,7 +115,7 @@ class AddSupplierComponent extends Component {
                                 </div>
                                 <div className="form-group">
                                     <label>Items</label><br/>
-                                    <select value={this.state.item} onChange={this.changeItemsHandler}>
+                                    <select value={this.state.itemByItemidFk} onChange={this.changeItemsHandler}>
                                         {this.state.items.map((data) => (
                                             <option value={data.id}>{data.name}</option>
                                         ))}

@@ -7,7 +7,8 @@ class ViewItemComponent extends Component {
         super(props);
         this.state = {
             id: this.props.match.params.id,
-            item: {},
+            item: [],
+            suppliersById:[],
             supplierName: ''
         }
     }
@@ -19,7 +20,7 @@ class ViewItemComponent extends Component {
                 this.setState({
                     name: item.name,
                     itemCode: item.itemCode,
-                    supplier: item.supplier,
+                    suppliersById: item.suppliersById,
                     amountRemaining: item.amountRemaining,
                     unitPrice: item.unitPrice,
                 });
@@ -65,10 +66,12 @@ class ViewItemComponent extends Component {
                                            value={this.state.itemCode} readOnly={true}/>
                                 </div>
                                 <div className="form-group">
-                                    <label>Supplier</label>
-                                    <input type="text" placeholder="Amount Remaining" name="amountRemaining"
-                                           className="form-control"
-                                           value={this.state.supplierName} readOnly={true}/>
+                                    <label style={{marginRight: "15px"}}>Supplier</label>
+                                    <select value={""} aria-readonly={"true"}>
+                                        {this.state.suppliersById.map((data) => (
+                                            <option value={data.id}>{data.name}</option>
+                                        ))}
+                                    </select>
                                 </div>
                                 <div className="form-group">
                                     <label>Amount Remaining </label>

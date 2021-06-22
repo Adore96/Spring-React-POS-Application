@@ -9,10 +9,10 @@ class AddItemComponent extends Component {
         super(props);
         this.state = {
             name: '',
-            itemcode: '',
+            itemCode: '',
             suppliers: [],
-            amountremaining: '',
-            unitprice: '',
+            amountRemaining: '',
+            unitPrice: '',
             selectedOption: '',
             supplier: ''
         }
@@ -22,10 +22,10 @@ class AddItemComponent extends Component {
         event.preventDefault();
         let item = {
             name: this.state.name,
-            itemcode: this.state.itemcode,
+            itemCode: this.state.itemCode,
             supplier: this.state.supplier,
-            amountremaining: this.state.amountremaining,
-            unitprice: this.state.unitprice
+            amountRemaining: this.state.amountRemaining,
+            unitPrice: this.state.unitPrice
         };
         console.log('Item => ' + JSON.stringify(item));
 

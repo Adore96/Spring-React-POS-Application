@@ -7,8 +7,9 @@ On 4/28/2021
 
 import com.adore96.ReactBackEnd.mapping.BillEntity;
 import com.adore96.ReactBackEnd.repository.BillReposiory;
-import com.adore96.ReactBackEnd.service.billservice.BillServiceImpl;
+import com.adore96.ReactBackEnd.service.billservice.BillService;
 import com.adore96.ReactBackEnd.service.userservice.UserServiceImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Slf4j
 @RestController
 @CrossOrigin
 @RequestMapping("api/v1/")
@@ -26,7 +28,7 @@ public class BillController {
     BillReposiory billReposiory;
 
     @Autowired
-    BillServiceImpl billServiceImpl;
+    BillService billService;
 
     @Autowired
     UserServiceImpl userServiceImpl;
@@ -34,22 +36,22 @@ public class BillController {
     //list of bills
     @RequestMapping("/bills")
     public List<BillEntity> getBills() {
-        System.out.println("ListBills Controller");
+        log.info("ListBills Controller");
         return billReposiory.findAll();
     }
 
     //add bill
     @PostMapping("/add-bill")
     public BillEntity addbill(@RequestBody BillEntity billEntity) {
-        System.out.println("AddBill Controller");
-        billReposiory.save(billServiceImpl.saveBill(billEntity));
+        log.info("AddBill Controller");
+        billReposiory.save(billService.saveBill(billEntity));
         return billEntity;
     }
 
     //delete bill by id
     @RequestMapping("/delete-bill/{id}")
     public ResponseEntity<Map<String, Boolean>> deleteBillbyId(@PathVariable Integer id) {
-        System.out.println("Deletebill Controller");
+        log.info("Deletebill Controller");
         BillEntity billEntity = billReposiory.findById(id).orElse(null);
         billReposiory.delete(billEntity);
         Map<String, Boolean> response = new HashMap<>();
@@ -60,7 +62,7 @@ public class BillController {
     //update bill rest api
     @PostMapping("/update-bill/{id}")
     public BillEntity updatebill(@PathVariable Integer id, @RequestBody BillEntity newBillEntity) {
-        System.out.println("UpdateBill Controller");
+        log.info("UpdateBill Controller");
         BillEntity billEntity = billReposiory.findById(id).orElse(null);
 
         billEntity.setBillAmount(newBillEntity.getBillAmount());
@@ -73,7 +75,7 @@ public class BillController {
 
     @GetMapping("/bills/{id}")
     public BillEntity getBillbyId(@PathVariable Integer id) {
-        System.out.println("getBillbyId Method Controller");
+        log.info("getBillbyId Method Controller");
         BillEntity billEntity = billReposiory.findById(id).orElse(null);
         return billEntity;
     }
