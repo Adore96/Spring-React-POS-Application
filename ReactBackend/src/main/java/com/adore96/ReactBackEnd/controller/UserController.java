@@ -8,6 +8,7 @@ On 3/25/2021
 import com.adore96.ReactBackEnd.mapping.UserEntity;
 import com.adore96.ReactBackEnd.repository.UserRepository;
 import com.adore96.ReactBackEnd.service.userservice.UserServiceImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Slf4j
 @CrossOrigin
 @RestController
 @RequestMapping("api/v1/")
@@ -30,14 +32,14 @@ public class UserController {
     //list of users
     @RequestMapping("/users")
     public List<UserEntity> getUsers() {
-        System.out.println("ListUser method");
+        log.info("ListUser method");
         return userRepository.findAll();
     }
 
     //add user
     @PostMapping("/add-user")
     public UserEntity addEmployee(@RequestBody UserEntity userEntity) {
-        System.out.println("Add Uer Method");
+        log.info("Add Uer Method");
         userRepository.save(userServiceImpl.saveUser(userEntity));
         return userEntity;
     }
@@ -68,7 +70,7 @@ public class UserController {
 
     @GetMapping("/users/{id}")
     public UserEntity getUserbyId(@PathVariable Integer id) {
-        System.out.println("Delete Method Controller");
+        log.info("Delete Method Controller");
         UserEntity userEntity = userRepository.findById(id).orElse(null);
         return userEntity;
     }

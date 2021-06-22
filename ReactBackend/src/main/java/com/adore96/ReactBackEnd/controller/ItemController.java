@@ -8,6 +8,7 @@ On 4/20/2021
 import com.adore96.ReactBackEnd.mapping.ItemEntity;
 import com.adore96.ReactBackEnd.repository.ItemRepository;
 import com.adore96.ReactBackEnd.service.itemservice.ItemServiceImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Slf4j
 @RestController
 @CrossOrigin
 @RequestMapping("api/v1/")
@@ -30,14 +32,14 @@ public class ItemController {
     //list of stocks
     @RequestMapping("/items")
     public List<ItemEntity> getStocks() {
-        System.out.println("ListStock method");
+        log.info("ListStock method");
         return itemRepository.findAll();
     }
 
     //add stock
     @PostMapping("/add-item")
     public ItemEntity addstock(@RequestBody ItemEntity itemEntity) {
-        System.out.println("AddStock Method");
+        log.info("AddStock Method");
         itemRepository.save(itemServiceImpl.saveStock(itemEntity));
         return itemEntity;
     }
@@ -69,7 +71,7 @@ public class ItemController {
 
     @GetMapping("/items/{id}")
     public ItemEntity getStockbyId(@PathVariable Integer id) {
-        System.out.println("getStockbyId Method Controller");
+        log.info("getStockbyId Method Controller");
         ItemEntity itemEntity = itemRepository.findById(id).orElse(null);
         return itemEntity;
     }

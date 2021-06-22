@@ -10,6 +10,7 @@ import com.adore96.ReactBackEnd.mapping.SupplierEntity;
 import com.adore96.ReactBackEnd.repository.ItemRepository;
 import com.adore96.ReactBackEnd.repository.SupplierRepository;
 import com.adore96.ReactBackEnd.service.supplierservice.SupplierServiceImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,6 +19,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Slf4j
 @CrossOrigin
 @RestController
 @RequestMapping("api/v1/")
@@ -42,7 +44,7 @@ public class SupplierController {
     //add supplier
     @PostMapping("/add-supplier")
     public SupplierEntity addEmployee(@RequestBody SupplierEntity supplierEntity) {
-        System.out.println("ListSupplier Method");
+        log.info("ListSupplier Method");
         supplierRepository.save(supplierServiceImpl.saveSupplier(supplierEntity));
         return supplierEntity;
     }
@@ -74,14 +76,14 @@ public class SupplierController {
 
     @GetMapping("/suppliers/{id}")
     public SupplierEntity getSupplierbyId(@PathVariable Integer id) {
-        System.out.println("Delete Method Controller");
+        log.info("Delete Method Controller");
         SupplierEntity supplierEntity = supplierRepository.findById(id).orElse(null);
         return supplierEntity;
     }
 
     @GetMapping("/item-list")
     public List<ItemEntity> getItemsList() {
-        System.out.println("List Items Method for adding Suppliers Controller");
+        log.info("List Items Method for adding Suppliers Controller");
         return itemRepository.findAll();
     }
 }
