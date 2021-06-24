@@ -12,7 +12,6 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Collection;
-import java.util.Objects;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -55,7 +54,6 @@ public class UserEntity {
     @OneToMany(mappedBy = "userByUseridfk")
     private Collection<BillEntity> billsById;
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public int getId() {
         return id;

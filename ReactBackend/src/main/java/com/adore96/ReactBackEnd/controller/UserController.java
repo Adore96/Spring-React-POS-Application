@@ -33,15 +33,16 @@ public class UserController {
     @RequestMapping("/users")
     public List<UserEntity> getUsers() {
         log.info("ListUser method");
-        return userRepository.findAll();
+        List<UserEntity> userEntities = userServiceImpl.UserList();
+        return userEntities;
     }
 
     //add user
     @PostMapping("/add-user")
-    public UserEntity addEmployee(@RequestBody UserEntity userEntity) {
+    public String addUser(@RequestBody UserEntity userEntity) {
         log.info("Add Uer Method");
-        userRepository.save(userServiceImpl.saveUser(userEntity));
-        return userEntity;
+        String status = userServiceImpl.saveUser(userEntity);
+        return status;
     }
 
     //delete employee by id
@@ -57,14 +58,9 @@ public class UserController {
     //update user rest api
     @PostMapping("/update-user/{id}")
     public UserEntity updateuser(@PathVariable Integer id, @RequestBody UserEntity newUserEntity) {
-        UserEntity userEntity = userRepository.findById(id).orElse(null);
+        log.info("Updateuser Method Controller");
+        String status = userServiceImpl.updateUser(id, newUserEntity);
 
-        userEntity.setUsername(newUserEntity.getUsername());
-        userEntity.setPassword(newUserEntity.getPassword());
-        userEntity.setTelephone(newUserEntity.getTelephone());
-        userEntity.setEmail(newUserEntity.getEmail());
-
-        UserEntity updatedUserEntity = userRepository.save(userEntity);
         return updatedUserEntity;
     }
 

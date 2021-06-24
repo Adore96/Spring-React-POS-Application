@@ -48,8 +48,6 @@ public class ItemEntity {
     @OneToMany(mappedBy = "itemByItemidFk")
     private Collection<SupplierEntity> suppliersById;
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
     public int getId() {
         return id;

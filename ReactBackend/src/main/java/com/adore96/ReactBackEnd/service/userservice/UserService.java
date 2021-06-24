@@ -7,10 +7,16 @@ On 5/5/2021
 
 import com.adore96.ReactBackEnd.mapping.UserEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
+
+import java.util.List;
 
 @Service
 public interface UserService {
-    UserEntity saveUser(@RequestBody UserEntity userEntity);
+
+    String saveUser(UserEntity userEntity);
+
+    List<UserEntity> UserList();
+
+    String updateUser(Integer id, UserEntity userEntity);
 
 }
