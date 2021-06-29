@@ -6,7 +6,9 @@ On 4/28/2021
 */
 
 import com.adore96.ReactBackEnd.bean.SupplierInputBean;
+import com.adore96.ReactBackEnd.mapping.ItemEntity;
 import com.adore96.ReactBackEnd.mapping.SupplierEntity;
+import com.adore96.ReactBackEnd.repository.ItemRepository;
 import com.adore96.ReactBackEnd.repository.SupplierRepository;
 import com.adore96.ReactBackEnd.util.TimeStampGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,9 @@ public class SupplierServiceImpl implements SupplierService {
 
     @Autowired
     SupplierRepository supplierRepository;
+
+    @Autowired
+    ItemRepository itemRepository;
 
     @Override
     public String addSupplier(SupplierInputBean supplierInputBean) {
@@ -68,22 +73,30 @@ public class SupplierServiceImpl implements SupplierService {
 
     @Override
     public String deleteSupplierbyId(Integer id) {
-        return null;
+        String status = "success";
+
+        supplierRepository.deleteById(id);
+        return status;
     }
 
     @Override
     public List<SupplierEntity> getSuppliers() {
-        return null;
+
+        List<SupplierEntity> supplierEntities = supplierRepository.findAll();
+
+        return supplierEntities;
     }
 
     @Override
     public SupplierEntity getSupplierbyId(Integer id) {
-        return null;
+
+        SupplierEntity supplierEntity = supplierRepository.findById(id).orElse(null);
+        return supplierEntity;
     }
 
     @Override
-    public List<SupplierEntity> getItemsList() {
-        return null;
+    public List<ItemEntity> getItemsList() {
+        List<ItemEntity> itemEntities = itemRepository.findAll();
+        return itemEntities;
     }
-
 }

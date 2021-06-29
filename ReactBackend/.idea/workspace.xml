@@ -153,7 +153,7 @@
       <workItem from="1624540527440" duration="99000" />
       <workItem from="1624727640235" duration="154000" />
       <workItem from="1624804773133" duration="7695000" />
-      <workItem from="1624984192740" duration="2197000" />
+      <workItem from="1624984192740" duration="4876000" />
     </task>
     <task id="LOCAL-00001" summary="Dev Update">
       <created>1622312041629</created>
@@ -204,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624811094837</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Supplier Service update">
+      <created>1624986619332</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1624986619332</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,7 +227,8 @@
     <MESSAGE value="Dev Update" />
     <MESSAGE value="Entity annotations update" />
     <MESSAGE value="UserController.java Updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="UserController.java Updates" />
+    <MESSAGE value="Supplier Service update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Supplier Service update" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

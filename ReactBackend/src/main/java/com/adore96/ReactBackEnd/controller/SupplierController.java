@@ -15,9 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Slf4j
 @CrossOrigin
@@ -46,49 +44,66 @@ public class SupplierController {
     @PostMapping("/add-supplier")
     public String addSupplier(@RequestBody SupplierInputBean supplierInputBean) {
         log.info("addEmployee Method Controller");
+        String status = null;
 
-        String status = supplierService.addSupplier(supplierInputBean);
-        return status;
+        if (supplierInputBean != null) {
+            status = supplierService.addSupplier(supplierInputBean);
+            return status;
+        } else {
+            status = "fail";
+            return status;
+        }
     }
 
     //delete employee by id
     @RequestMapping("/delete-supplier/{id}")
     public String deleteSupplierbyId(@PathVariable Integer id) {
         log.info("deleteSupplierbyId method Controller");
+        String status = null;
 
-        supplierService.deleteSupplierbyId(id);
-
-        SupplierEntity supplierEntity = supplierRepository.findById(id).orElse(null);
-        supplierRepository.delete(supplierEntity);
-        Map<String, Boolean> response = new HashMap<>();
-        response.put("deleted", Boolean.TRUE);
-        return null;
+        if (id != null && id != 0) {
+            supplierService.deleteSupplierbyId(id);
+            status = "success";
+            return status;
+        } else {
+            status = "fail";
+            return status;
+        }
     }
 
     //update supplier
     @PostMapping("/update-supplier/{id}")
     public String updatesupplier(@PathVariable Integer id, @RequestBody SupplierInputBean supplierInputBean) {
         log.info("updatesupplier method Controller");
+        String status = null;
 
-        String status = supplierService.updatesupplier(id, supplierInputBean);
-
-        return status;
+        if (id != null && id != 0 && supplierInputBean != null) {
+            status = supplierService.updatesupplier(id, supplierInputBean);
+            return status;
+        } else {
+            return "fail";
+        }
     }
 
     @GetMapping("/suppliers/{id}")
     public SupplierEntity getSupplierbyId(@PathVariable Integer id) {
         log.info("getSupplierbyId Method Controller");
 
-        SupplierEntity supplierEntity = supplierRepository.findById(id).orElse(null);
-        return supplierEntity;
+        if (id != 0 && id != null) {
+            SupplierEntity supplierEntity = supplierRepository.findById(id).orElse(null);
+            return supplierEntity;
+        } else {
+            log.info("id is empty");
+            return null;
+        }
     }
 
     @GetMapping("/item-list")
     public List<ItemEntity> getItemsList() {
         log.info("getItemsList method Controller");
 
-        List<SupplierEntity> supplierEntities = supplierService.getItemsList();
-        return itemRepository.findAll();
+        List<ItemEntity> supplierEntities = supplierService.getItemsList();
+        return supplierEntities;
     }
 }
 

@@ -6,6 +6,7 @@ On 5/5/2021
 */
 
 import com.adore96.ReactBackEnd.bean.SupplierInputBean;
+import com.adore96.ReactBackEnd.mapping.ItemEntity;
 import com.adore96.ReactBackEnd.mapping.SupplierEntity;
 import org.springframework.stereotype.Service;
 
@@ -24,5 +25,5 @@ public interface SupplierService {
 
     SupplierEntity getSupplierbyId(Integer id);
 
-    List<SupplierEntity> getItemsList();
+    List<ItemEntity> getItemsList();
 }
