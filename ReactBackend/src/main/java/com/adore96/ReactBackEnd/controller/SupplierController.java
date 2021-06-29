@@ -5,14 +5,14 @@ Project ReactBackEnd
 On 4/21/2021
 */
 
+import com.adore96.ReactBackEnd.bean.SupplierInputBean;
 import com.adore96.ReactBackEnd.mapping.ItemEntity;
 import com.adore96.ReactBackEnd.mapping.SupplierEntity;
 import com.adore96.ReactBackEnd.repository.ItemRepository;
 import com.adore96.ReactBackEnd.repository.SupplierRepository;
-import com.adore96.ReactBackEnd.service.supplierservice.SupplierServiceImpl;
+import com.adore96.ReactBackEnd.service.supplierservice.SupplierService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -32,58 +32,62 @@ public class SupplierController {
     ItemRepository itemRepository;
 
     @Autowired
-    SupplierServiceImpl supplierServiceImpl;
+    SupplierService supplierService;
 
     //list of suppliers
     @RequestMapping("/suppliers")
     public List<SupplierEntity> getSuppliers() {
-        System.out.println("ListSupplier method");
-        return supplierRepository.findAll();
+        log.info("getSuppliers method Controller");
+        List<SupplierEntity> supplierEntities = supplierService.getSuppliers();
+        return supplierEntities;
     }
 
     //add supplier
     @PostMapping("/add-supplier")
-    public SupplierEntity addEmployee(@RequestBody SupplierEntity supplierEntity) {
-        log.info("ListSupplier Method");
-        supplierRepository.save(supplierServiceImpl.saveSupplier(supplierEntity));
-        return supplierEntity;
+    public String addSupplier(@RequestBody SupplierInputBean supplierInputBean) {
+        log.info("addEmployee Method Controller");
+
+        String status = supplierService.addSupplier(supplierInputBean);
+        return status;
     }
 
     //delete employee by id
     @RequestMapping("/delete-supplier/{id}")
-    public ResponseEntity<Map<String, Boolean>> deleteSupplierbyId(@PathVariable Integer id) {
+    public String deleteSupplierbyId(@PathVariable Integer id) {
+        log.info("deleteSupplierbyId method Controller");
+
+        supplierService.deleteSupplierbyId(id);
+
         SupplierEntity supplierEntity = supplierRepository.findById(id).orElse(null);
         supplierRepository.delete(supplierEntity);
         Map<String, Boolean> response = new HashMap<>();
         response.put("deleted", Boolean.TRUE);
-        return ResponseEntity.ok(response);
+        return null;
     }
 
     //update supplier
     @PostMapping("/update-supplier/{id}")
-    public SupplierEntity updatesupplier(@PathVariable Integer id, @RequestBody SupplierEntity newSupplierEntity) {
-        SupplierEntity supplierEntity = supplierRepository.findById(id).orElse(null);
+    public String updatesupplier(@PathVariable Integer id, @RequestBody SupplierInputBean supplierInputBean) {
+        log.info("updatesupplier method Controller");
 
-        supplierEntity.setName(newSupplierEntity.getName());
-        supplierEntity.setTelephone(newSupplierEntity.getTelephone());
-        supplierEntity.setItem1(newSupplierEntity.getItem1());
-        supplierEntity.setItem2(newSupplierEntity.getItem2());
-        supplierEntity.setItem3(newSupplierEntity.getItem3());
+        String status = supplierService.updatesupplier(id, supplierInputBean);
 
-        SupplierEntity updatedSupplierEntity = supplierRepository.save(supplierEntity);
-        return updatedSupplierEntity;
+        return status;
     }
 
     @GetMapping("/suppliers/{id}")
     public SupplierEntity getSupplierbyId(@PathVariable Integer id) {
-        log.info("Delete Method Controller");
+        log.info("getSupplierbyId Method Controller");
+
         SupplierEntity supplierEntity = supplierRepository.findById(id).orElse(null);
         return supplierEntity;
     }
 
     @GetMapping("/item-list")
     public List<ItemEntity> getItemsList() {
-        log.info("List Items Method for adding Suppliers Controller");
+        log.info("getItemsList method Controller");
+
+        List<SupplierEntity> supplierEntities = supplierService.getItemsList();
         return itemRepository.findAll();
     }
 }

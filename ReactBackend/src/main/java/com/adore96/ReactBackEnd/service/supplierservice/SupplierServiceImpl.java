@@ -5,22 +5,85 @@ Project ReactBackEnd
 On 4/28/2021
 */
 
+import com.adore96.ReactBackEnd.bean.SupplierInputBean;
 import com.adore96.ReactBackEnd.mapping.SupplierEntity;
+import com.adore96.ReactBackEnd.repository.SupplierRepository;
 import com.adore96.ReactBackEnd.util.TimeStampGenerator;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class SupplierServiceImpl implements SupplierService {
-    @Override
-    public SupplierEntity saveSupplier(SupplierEntity supplierEntity) {
-        SupplierEntity supplierEntity1 = new SupplierEntity();
-        supplierEntity1.setName(supplierEntity.getName());
-        supplierEntity1.setItem1(supplierEntity.getItem1());
-        supplierEntity1.setItem2(supplierEntity.getItem2());
-        supplierEntity1.setItem3(supplierEntity.getItem3());
-        supplierEntity1.setTelephone(supplierEntity.getTelephone());
-        supplierEntity1.setCreatedTime(new TimeStampGenerator().getTimestamp());
 
-        return supplierEntity1;
+    @Autowired
+    SupplierRepository supplierRepository;
+
+    @Override
+    public String addSupplier(SupplierInputBean supplierInputBean) {
+        String status = null;
+        SupplierEntity supplierEntity = new SupplierEntity();
+        supplierEntity.setName(supplierInputBean.getName());
+        supplierEntity.setItem1(supplierInputBean.getItem1());
+        supplierEntity.setItem2(supplierInputBean.getItem2());
+        supplierEntity.setItem3(supplierInputBean.getItem3());
+        supplierEntity.setTelephone(supplierInputBean.getTelephone());
+        supplierEntity.setCreatedTime(new TimeStampGenerator().getTimestamp());
+
+        SupplierEntity supplierEntity1 = supplierRepository.save(supplierEntity);
+
+        if (supplierEntity1 != null) {
+            status = "success";
+            return status;
+        } else {
+            status = "fail";
+            return status;
+        }
     }
+
+    @Override
+    public String updatesupplier(Integer id, SupplierInputBean supplierInputBean) {
+        String status = null;
+        SupplierEntity updatedSupplierEntity;
+
+        SupplierEntity supplierEntity = supplierRepository.findById(id).orElse(null);
+
+        supplierEntity.setName(supplierInputBean.getName());
+        supplierEntity.setTelephone(supplierInputBean.getTelephone());
+        supplierEntity.setItem1(supplierInputBean.getItem1());
+        supplierEntity.setItem2(supplierInputBean.getItem2());
+        supplierEntity.setItem3(supplierInputBean.getItem3());
+
+        updatedSupplierEntity = supplierRepository.save(supplierEntity);
+
+        if (updatedSupplierEntity != null) {
+            status = "success";
+            return status;
+        } else {
+            status = "fail";
+            return status;
+        }
+    }
+
+    @Override
+    public String deleteSupplierbyId(Integer id) {
+        return null;
+    }
+
+    @Override
+    public List<SupplierEntity> getSuppliers() {
+        return null;
+    }
+
+    @Override
+    public SupplierEntity getSupplierbyId(Integer id) {
+        return null;
+    }
+
+    @Override
+    public List<SupplierEntity> getItemsList() {
+        return null;
+    }
+
 }
