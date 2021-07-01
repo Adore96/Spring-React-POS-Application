@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="974d01d3-6973-418e-9f6f-713ad5ff70c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/SupplierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/SupplierController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/service/supplierservice/SupplierService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/service/supplierservice/SupplierService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/service/supplierservice/SupplierServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/service/supplierservice/SupplierServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="974d01d3-6973-418e-9f6f-713ad5ff70c2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -153,7 +148,7 @@
       <workItem from="1624540527440" duration="99000" />
       <workItem from="1624727640235" duration="154000" />
       <workItem from="1624804773133" duration="7695000" />
-      <workItem from="1624984192740" duration="4876000" />
+      <workItem from="1624984192740" duration="4941000" />
     </task>
     <task id="LOCAL-00001" summary="Dev Update">
       <created>1622312041629</created>
@@ -211,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624986619332</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Supplier Controller Complete">
+      <created>1624989601926</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1624989601926</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +230,8 @@
     <MESSAGE value="Entity annotations update" />
     <MESSAGE value="UserController.java Updates" />
     <MESSAGE value="Supplier Service update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Supplier Service update" />
+    <MESSAGE value="Supplier Controller Complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Supplier Controller Complete" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

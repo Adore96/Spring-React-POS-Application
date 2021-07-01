@@ -7,14 +7,12 @@ On 4/5/2021
 
 import com.adore96.ReactBackEnd.mapping.BillEntity;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.util.Collection;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserInputBean {
