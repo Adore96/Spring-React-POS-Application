@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="974d01d3-6973-418e-9f6f-713ad5ff70c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/SupplierController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/adore96/ReactBackEnd/controller/SupplierController.java" afterDir="false" />
-    </list>
+    <list default="true" id="974d01d3-6973-418e-9f6f-713ad5ff70c2" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,7 +144,11 @@
       <workItem from="1622562375377" duration="664000" />
       <workItem from="1622605717205" duration="1837000" />
       <workItem from="1622623027381" duration="87000" />
-      <workItem from="1624344179646" duration="2126000" />
+      <workItem from="1624344179646" duration="8213000" />
+      <workItem from="1624540527440" duration="99000" />
+      <workItem from="1624727640235" duration="154000" />
+      <workItem from="1624804773133" duration="7695000" />
+      <workItem from="1624984192740" duration="4941000" />
     </task>
     <task id="LOCAL-00001" summary="Dev Update">
       <created>1622312041629</created>
@@ -170,7 +171,49 @@
       <option name="project" value="LOCAL" />
       <updated>1624365408889</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Annotation Update in Controller complete">
+      <created>1624365756931</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1624365756931</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Dev Update">
+      <created>1624540545430</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1624540545430</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Entity annotations update">
+      <created>1624727783798</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1624727783798</updated>
+    </task>
+    <task id="LOCAL-00007" summary="UserController.java Updates">
+      <created>1624811094837</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1624811094837</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Supplier Service update">
+      <created>1624986619332</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1624986619332</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Supplier Controller Complete">
+      <created>1624989601926</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1624989601926</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,10 +223,15 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Dev Update" />
     <MESSAGE value="workspace.xml file update" />
     <MESSAGE value="Annotation Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Annotation Update" />
+    <MESSAGE value="Annotation Update in Controller complete" />
+    <MESSAGE value="Dev Update" />
+    <MESSAGE value="Entity annotations update" />
+    <MESSAGE value="UserController.java Updates" />
+    <MESSAGE value="Supplier Service update" />
+    <MESSAGE value="Supplier Controller Complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Supplier Controller Complete" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

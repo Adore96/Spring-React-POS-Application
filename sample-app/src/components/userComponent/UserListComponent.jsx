@@ -72,7 +72,7 @@ class UserListComponent extends React.Component {
                                     <td>{user.username}</td>
                                     <td>{user.email}</td>
                                     <td>{user.telephone}</td>
-                                    <td>{user.createdtime}</td>
+                                    <td>{user.createdTime}</td>
                                     <td>
                                         <button onClick={() => this.updateUser(user.id)}
                                                 className="btn btn-outline-info">Update
