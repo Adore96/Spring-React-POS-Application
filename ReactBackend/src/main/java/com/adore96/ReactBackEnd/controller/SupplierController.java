@@ -32,7 +32,6 @@ public class SupplierController {
     @Autowired
     SupplierService supplierService;
 
-    //list of suppliers
     @RequestMapping("/suppliers")
     public List<SupplierEntity> getSuppliers() {
         log.info("getSuppliers method Controller");
@@ -40,7 +39,6 @@ public class SupplierController {
         return supplierEntities;
     }
 
-    //add supplier
     @PostMapping("/add-supplier")
     public String addSupplier(@RequestBody SupplierInputBean supplierInputBean) {
         log.info("addEmployee Method Controller");
@@ -55,7 +53,6 @@ public class SupplierController {
         }
     }
 
-    //delete employee by id
     @RequestMapping("/delete-supplier/{id}")
     public String deleteSupplierbyId(@PathVariable Integer id) {
         log.info("deleteSupplierbyId method Controller");
@@ -71,7 +68,6 @@ public class SupplierController {
         }
     }
 
-    //update supplier
     @PostMapping("/update-supplier/{id}")
     public String updatesupplier(@PathVariable Integer id, @RequestBody SupplierInputBean supplierInputBean) {
         log.info("updatesupplier method Controller");

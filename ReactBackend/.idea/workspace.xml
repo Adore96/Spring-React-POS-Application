@@ -149,6 +149,7 @@
       <workItem from="1624727640235" duration="154000" />
       <workItem from="1624804773133" duration="7695000" />
       <workItem from="1624984192740" duration="4941000" />
+      <workItem from="1625158366179" duration="303000" />
     </task>
     <task id="LOCAL-00001" summary="Dev Update">
       <created>1622312041629</created>
@@ -213,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624989601926</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Annotation Update">
+      <created>1625158473097</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1625158473097</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,14 +232,14 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="workspace.xml file update" />
-    <MESSAGE value="Annotation Update" />
     <MESSAGE value="Annotation Update in Controller complete" />
     <MESSAGE value="Dev Update" />
     <MESSAGE value="Entity annotations update" />
     <MESSAGE value="UserController.java Updates" />
     <MESSAGE value="Supplier Service update" />
     <MESSAGE value="Supplier Controller Complete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Supplier Controller Complete" />
+    <MESSAGE value="Annotation Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Annotation Update" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
