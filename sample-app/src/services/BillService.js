@@ -23,6 +23,10 @@ class BillService {
     deleteBill(billId) {
         return axios.get(DELETE_BILL_REST_API + '/' + billId);
     }
+    
+    deleteBillById(billId) {
+        return axios.get(DELETE_BILL_REST_API + '/' + billId);
+    }
 }
 
 export default new BillService();
